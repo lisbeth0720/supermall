@@ -8,9 +8,11 @@
 // }).$mount('#app')
 
 //vue-cli4的导入写法
-import { createApp } from 'vue'
+import {createApp} from 'vue'
 import App from './App.vue'
 import router from './router'
+//import axios from 'axios'
+
 //createApp(App).use(插件)
 createApp(App).use(router).mount("#app")
 createApp(App).config.productionTip = false
@@ -20,3 +22,4 @@ createApp(App).config.productionTip = false
 // });
 
 //require('./assets/css/base.css');
+//import {request} from "./network/request.js";

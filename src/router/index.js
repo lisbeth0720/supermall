@@ -3,14 +3,14 @@
 import { createApp } from 'vue'
 import {createRouter,createWebHashHistory} from 'vue-router'
 
-//const Home =() =>import('../views/home/Home.vue');
-//const Category =() =>import('../views/category/Category.vue');
-//const Cart =() =>import('../views/cart/Cart.vue');
-//const Profile =() =>import('../views/profile/Profile.vue');
-import Home from '../views/home/Home.vue'
-import Category from '../views/category/Category.vue'
-import Cart from '../views/cart/Cart.vue'
-import Profile from '../views/profile/Profile.vue'
+const Home =() =>import('../views/home/Home.vue');
+const Category =() =>import('../views/category/Category.vue');
+const Cart =() =>import('../views/cart/Cart.vue');
+const Profile =() =>import('../views/profile/Profile.vue');
+// import Home from '../views/home/Home.vue'
+// import Category from '../views/category/Category.vue'
+// import Cart from '../views/cart/Cart.vue'
+// import Profile from '../views/profile/Profile.vue'
 
 //1.安装插件
 //Vue.use(VueRouter);
