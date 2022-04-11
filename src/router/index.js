@@ -24,23 +24,38 @@ const routes=[
    },
    {
     path:'/home',
-    component:Home
+    component:Home,
+    meta:{
+      keepAlive:true
+    }
   },
    {
     path:'/category',
-    component:Category
+    component:Category,
+    meta:{
+      keepAlive:true
+    }
   },
   {
     path:'/cart',
-    component:Cart
+    component:Cart,
+    meta:{
+      keepAlive:true
+    }
   },
   {
     path:'/profile',
-    component:Profile
+    component:Profile,
+    meta:{
+      keepAlive:true
+    }
   },
   {
     path:'/detail/:iid',
-    component:Detail
+    component:Detail,
+    meta:{
+      keepAlive:false
+    }
   }
 ]
 //const router =new VueRouter({

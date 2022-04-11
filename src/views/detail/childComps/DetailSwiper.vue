@@ -28,8 +28,8 @@
   }
 </script>
 <style scoped>
-  .detail-swiper{
-      height:300px;
-      overflow: hidden;
+  .detail-swiper img{
+      height:240px;
+      width:100%;
   }
 </style>
