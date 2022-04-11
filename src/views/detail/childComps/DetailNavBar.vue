@@ -53,7 +53,7 @@
   }
   .active{
     color:var(--color-high-text);
-    border-bottom:1px solid var(--color-high-text);
+    /* border-bottom:1px solid var(--color-high-text); */
   }
   .back{
     margin-top:8px;
