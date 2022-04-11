@@ -48,7 +48,7 @@
        //better-scroll默认是只能加载更多一次，需要执行scroll.finishPullUp()才能加载更多数据
        if(this.pullUpLoad){
         this.bscroll.on('pullingUp', () => {
-          console.log('上拉加载');
+          //console.log('上拉加载');
           //监听到滚动底部
           this.$emit('pullingUp');
         })

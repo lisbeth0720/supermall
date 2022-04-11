@@ -1,5 +1,5 @@
 <template>
-   <div class="goods-item">
+   <div class="goods-item" @click="itemClick">
        <img :src="goodsItem.show.img" alt="" @load="imageLoad"/>
        <div class="goods-info">
            <p class="title">{{goodsItem.title}}</p>
@@ -25,6 +25,11 @@ export default {
     //监听图片加载完成后-要执行的操作
      imageLoad(){
         emitter.emit("itemImageLoad");
+     },
+     //跳转到详情页
+     itemClick(){
+       //console.log("详情页");
+       this.$router.push("/detail/"+this.goodsItem.iid);
      }
   },
   components: {//在components里注册组件后才能在模板里使用

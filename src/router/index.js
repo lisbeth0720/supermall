@@ -7,6 +7,7 @@ const Home =() =>import('../views/home/Home.vue');
 const Category =() =>import('../views/category/Category.vue');
 const Cart =() =>import('../views/cart/Cart.vue');
 const Profile =() =>import('../views/profile/Profile.vue');
+const Detail =() =>import('../views/detail/Detail.vue');
 // import Home from '../views/home/Home.vue'
 // import Category from '../views/category/Category.vue'
 // import Cart from '../views/cart/Cart.vue'
@@ -36,6 +37,10 @@ const routes=[
   {
     path:'/profile',
     component:Profile
+  },
+  {
+    path:'/detail/:iid',
+    component:Detail
   }
 ]
 //const router =new VueRouter({

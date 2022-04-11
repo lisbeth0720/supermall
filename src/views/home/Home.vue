@@ -86,7 +86,7 @@
     },
     created() {
       //created里拿不到标签的class名字 是undefined
-      console.log('创建Home');
+      //console.log('创建Home');
       // 1.请求多个数据
       this.getHomeMultidata();
       // 2.请求商品数据
