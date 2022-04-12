@@ -1,21 +1,21 @@
 <template>
-  <div>
-
-    <router-view></router-view>
-    <!-- vue2x配置 -->
-    <!-- <keep-alive exclude="Detail">
-       <router-view v-if="$route.meta.keepAlive"/>
+  <!-- <div id="app"> -->
+    <!-- <keep-alive>的作用是不被销毁，切换到这个界面的时候保持切换前的状态  -->
+      <!-- vue 2x的写法 -->
+    <!-- <keep-alive>
+       <router-view v-if="$route.meta.keepAlive"></router-view>
     </keep-alive>
-    <router-view v-if="!$route.meta.keepAlive"/> -->
-    <!-- vue3x配置 -->
-    <!-- <router-view v-slot="{Component}">
-       <keep-alive>
-         <component :is="Component" v-if="$route.meta.keepAlive" />
-       </keep-alive>
-          <component :is="Component" v-if="!$route.meta.keepAlive" />
-    </router-view> -->
+    <router-view v-if=" !$route.meta.keepAlive" /> -->
+      <!-- vue 3x的写法 -->
+    
+   <router-view v-slot="{Component}">
+     <keep-alive>
+       <component :is="Component" />
+     </keep-alive>
+   </router-view>
+    
     <main-tab-bar></main-tab-bar>
-  </div>
+  <!-- </div> -->
 </template>
 
 <script>

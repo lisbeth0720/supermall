@@ -1,0 +1,132 @@
+{
+    "iid": "1p01",
+    "result": {
+        "columns": [
+            "销量 684", "收藏 246人", "默认快递"
+        ],
+        "detailInfo": {
+            "desc": "此款为202年春新款，面料选用类似莫代尔的一种面料",
+            "esi": "<esi:try><esi:attempt><esi:include src='http://m.meilis'",
+            "isLogin": false
+        },
+        "itemInfo": {
+            "addCartTips": false,
+            "admin": false,
+            "cFav": 0,
+            "cartNum": 0,
+            "cids": "#682# #683# #684# #685#",
+            "desc": "此款为202年春新款，面料选用类似莫代尔的一种面料",
+            "discountBgColor": "#f13e3a",
+            "discountDesc": "商家让利",
+            "exrta": {
+                "deliveryTime": 72,
+                "sendAddress": "广东省揭阳市"
+            },
+            "highNowPrice": "29.98",
+            "highPrice": "42.84",
+            "iid": "1p01",
+            "imUrl": "https://imTaIk?souce=1&goodId=1p01&userid=13e",
+            "inActivity": false,
+            "isFaved": false,
+            "isGrayUser": false,
+            "isNewComer": false,
+            "isSelf": false,
+            "lowNowPrice": "29.98",
+            "lowPrice": "42.84",
+            "oldPrice": "￥42.84",
+            "price": "29.98",
+            "redPacketsSwitch": false,
+            "saleType": 0,
+            "shopId": "103dvg",
+            "state": 0,
+            "tags": "",
+            "title": "高领黑白条纹长袖女2022念安春新款韩版宽松百搭学生内搭",
+            "topImages": [
+                "https://gtms02.alicdn.com/tps/i2/TB10vPXKpXXXXacXXXXvKyzTVXX-520-280.jpg",
+                "https://gtms01.alicdn.com/tps/i1/TB1r4h8JXXXXXXoXXXXvKyzTVXX-520-280.jpg",
+                "https://img.alicdn.com/tfs/TB1wOidVWL7gK0jSZFBXXXZZpXa-520-280.jpg",
+                "https://img.alicdn.com/tfs/TB1FjZ7VWL7gK0jSZFBXXXZZpXa-520-280.png"
+            ],
+            "userId": "13exhmo",
+            "video": {
+                "cover": ""
+            }
+        },
+        "itemParams": {
+            "info": {
+
+            },
+            "rule": {
+
+            }
+        },
+        "promotions": {
+            "alertData": {
+
+            },
+            "link": "mls://shoppro?shopId=lo3dvg"
+        },
+        "rate": {
+            "cRate": 144,
+            "list": [
+
+            ]
+        },
+        "shopInfo": {
+            "allGoodsUrl": "http://m.meilishuo.com/shop/index/lo4juy",
+            "cFans": 17145,
+            "cGoods": 99,
+            "cSells": 57876,
+            "categories": [
+                {}
+            ],
+            "isMarked": false,
+            "lovel": false,
+            "shopLogo": "https://img.alicdn.com/tps/TB1W_vlJFXXXXXxXXXXXXXXXXXX-150-45.png",
+            "name": "沐雪小店",
+            "nonsupportReasonRefound": false,
+            "score": [{
+                    "isBetter": false,
+                    "name": "描述相符",
+                    "score": 4.64
+                },
+                {
+                    "isBetter": true,
+                    "name": "价格合理",
+                    "score": 5
+                },
+                {
+                    "isBetter": false,
+                    "name": "质量满意",
+                    "score": 3.88
+                }
+            ],
+            "services": [{
+                    "name": "沐雪小店",
+                    "icon": "沐雪小店"
+                },
+                {
+                    "name": "沐雪小店2",
+                    "icon": "沐雪小店2"
+                }
+            ],
+            "shopId": "13fac36",
+            "shopUrl": "http://",
+            "type": 1,
+            "userId": "13fac36",
+            "goodsCount": 10
+        },
+        "skuInfo": {
+            "defaultPrice": "￥29.98",
+            "isAbroad": false,
+            "priceRange": "...."
+        },
+        "topBar": {
+            "img": "//sll.mogucdn.com/p1/150811/upload_ieytsmbrmm4wkm"
+        }
+    },
+    "status": {
+        "code": 1001,
+        "msg": ""
+    }
+}
