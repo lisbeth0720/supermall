@@ -82,7 +82,8 @@
             ],
             "isMarked": false,
             "lovel": false,
-            "name": "仲陌美",
+            "shopLogo": "https://img.alicdn.com/tps/TB1W_vlJFXXXXXxXXXXXXXXXXXX-150-45.png",
+            "name": "沐雪小店",
             "nonsupportReasonRefound": false,
             "score": [{
                     "isBetter": false,
@@ -101,12 +102,12 @@
                 }
             ],
             "services": [{
-                    "name": "仲陌美",
-                    "icon": "仲陌美"
+                    "name": "沐雪小店",
+                    "icon": "沐雪小店"
                 },
                 {
-                    "name": "仲陌美2",
-                    "icon": "仲陌美2"
+                    "name": "沐雪小店2",
+                    "icon": "沐雪小店2"
                 }
             ],
             "shopId": "13fac36",
