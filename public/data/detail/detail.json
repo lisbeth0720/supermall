@@ -7,7 +7,15 @@
         "detailInfo": {
             "desc": "此款为202年春新款，面料选用类似莫代尔的一种面料",
             "esi": "<esi:try><esi:attempt><esi:include src='http://m.meilis'",
-            "isLogin": false
+            "isLogin": false,
+            "detailImage": [{
+                "list": [
+                    "https://img.alicdn.com/imgextra/i1/2133725026/O1CN011sAisA1mzxMjEBzC0_!!0-item_pic.jpg",
+                    "https://img.alicdn.com/imgextra/i1/2206472914739/O1CN01u1WVlY1ksVggxfIUv_!!2206472914739.jpg",
+                    "https://img.alicdn.com/imgextra/i3/2207285323466/O1CN019xk5ce1bTTT8Gv22t_!!0-item_pic.jpg_430x430q90.jpg",
+                    "https://img.alicdn.com/imgextra/i1/2212994938707/O1CN018d79oL2EBrI4P8Ltj_!!0-item_pic.jpg_430x430q90.jpg"
+                ]
+            }]
         },
         "itemInfo": {
             "addCartTips": false,
@@ -40,7 +48,7 @@
             "shopId": "103dvg",
             "state": 0,
             "tags": "",
-            "title": "高领黑白条纹长袖女2022念安春新款韩版宽松百搭学生内搭",
+            "title": "早春chic女装2022新款秋法式初恋系长裙小众设计感牛仔连衣裙子夏,高领黑白条纹长袖女2022念安春新款韩版宽松百搭学生内搭",
             "topImages": [
                 "https://gtms02.alicdn.com/tps/i2/TB10vPXKpXXXXacXXXXvKyzTVXX-520-280.jpg",
                 "https://gtms01.alicdn.com/tps/i1/TB1r4h8JXXXXXXoXXXXvKyzTVXX-520-280.jpg",

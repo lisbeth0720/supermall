@@ -12,18 +12,37 @@
                    :goods="goods"/>
          <detail-base-info :goods="goods" />
          <detail-shop-info :shop="shop" />
+         <detail-goods-info :detail-info="detailInfo" @imagesLoad="imagesLoad"/>
+         <!-- <ul>
+           <li>11111111111</li>
+           <li>11111111111</li>
+           <li>11111111111</li>
+           <li>11111111111</li>
+           <li>11111111111</li>
+           <li>11111111111</li>
+           <li>11111111111</li>
+           <li>11111111111</li>
+           <li>11111111111</li>
+
+         </ul> -->
    </better-scroll>
   </div>
 </template>
 <script>
+ //1.一些子组件
  import DetailNavBar from "./childComps/DetailNavBar.vue"
  import DetailSwiper from "./childComps/DetailSwiper.vue"
  import DetailBaseInfo from "./childComps/DetailBaseInfo.vue"
  import DetailShopInfo from "./childComps/DetailShopInfo.vue"
+ import DetailGoodsInfo from "./childComps/DetailGoodsInfo.vue"
+
+  //2.一些插件
  import BetterScroll from "components/common/scroll/BetterScroll.vue"
+ //import emitter from "assets/utils/mitt.js";
 
- import {getDetail,Goods,Shop} from "network/detail.js"
-
+ //3.一些方法
+  import {getDetail,Goods,Shop} from "network/detail.js"
+  import {debounce} from "common/utils.js";
 
   export default{
       name:"Detail",
@@ -32,14 +51,16 @@
           DetailSwiper,
           DetailBaseInfo,
           DetailShopInfo,
-          BetterScroll
+          BetterScroll,
+          DetailGoodsInfo
       },
       data(){
           return{
               iid:null,
               topImages:[],
               goods:{},
-              shop:{}
+              shop:{},
+              detailInfo:{}
           }
       },
       created(){
@@ -54,8 +75,27 @@
             this.goods=new Goods(data.itemInfo,data.columns,data.shopInfo.services);
             //2.3创建店铺信息
              this.shop=new Shop(data.shopInfo);
+            //2.4保存商品详情数据
+            this.detailInfo=data.detailInfo;
+            
          })
-      }
+      },
+      mounted(){
+      //1.监听item中图片加载完成
+      //  emitter.on("itemImageLoad",()=>{
+      //    this.$refs.scroll.refresh();
+      //  });
+      //处理this.$refs.scroll.refresh();调用频繁的问题
+       const refresh = debounce(this.$refs.scroll.refresh,200);
+      //  emitter.on("shopGoodsImageLoad",()=>{
+      //     refresh();
+      //  });
+     },
+     methods:{
+       imagesLoad(){
+         this.$refs.scroll.refresh();
+       }
+     }
   }
 </script>
 <style scoped>
@@ -71,13 +111,13 @@
     background-color:#fff;
   }
   .content{
-     /* position: absolute;
+     position: absolute;
       top: 44px; 
       bottom: 49px;
       left: 0;
       right: 0;
-      overflow:hidden; */
-      height:calc(100% - 44px)
+      overflow:hidden;
+      /* height:calc(100% - 44px) */
      
   }
 </style>
