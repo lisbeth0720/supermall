@@ -19,13 +19,37 @@ export default {
          default(){
              return {}
          }
-     }
+     },
+    whichPage:{//自己写的用于区分哪一页
+       type:Number
+    }
+  },
+  data(){
+    return{
+      whichPage:""
+    }
   },
   computed:{
      showImage(){
-       return goodsItem.show.image||this.goodsItem.show.img
+      // return this.goodsItem.show.image||this.goodsItem.image
+       //需要判断是首页还是详情页，因为数据格式不一样，在哪一页取那一页的数据
+       //const imgSrc="";
+      // console.log(this.goodsItem.show.image)
+       if(this.whichPage==0){
+          return this.goodsItem.show.image//首页数据
+       }else{
+         return this.goodsItem.image//详情页
+       }
+       //console.log(this.whichPage)
+      //  if(this.$router.path.indexOf("/home")){
+      //      imgSrc=this.goodsItem.show.image//首页数据
+      //   }else if(this.$router.path.indexOf("/detail")){
+      //      imgSrc=this.goodsItem.image//详情页
+      //   }
+        //return imgSrc;
      }
   },
+  
   methods:{
     //监听图片加载完成后-要执行的操作
      imageLoad(){

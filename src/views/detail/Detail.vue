@@ -15,7 +15,7 @@
          <detail-goods-info :detail-info="detailInfo" @imagesLoad="imagesLoad"/>
          <detail-param-info :param-info="paramInfo" />
          <detail-comment-info :comment-info="commentInfo" />
-         <goods-list :goods="recommends"/>
+         <goods-list :goods="recommends" :which-page="1"/>
    </better-scroll>
   </div>
 </template>
@@ -33,7 +33,7 @@
  import BetterScroll from "components/common/scroll/BetterScroll.vue"
  import GoodsList from "components/content/goods/GoodsList.vue"
 
- //import emitter from "assets/utils/mitt.js";
+ import emitter from "assets/utils/mitt.js";
 
  //3.一些方法
   import {getDetail,Goods,Shop,GoodsParam,getRecommend} from "network/detail.js"
@@ -67,7 +67,10 @@
       },
    activated(){
        //1.取消全局事件的监听
-       emitter.bus$off("itemImgLoad",this.itemImgListener)
+       //vue3去掉了$on、$off后，使用mitt第三方库替代eventBus的原理。
+       //emitter.bus.$off("itemImgLoad",this.itemImgListener);
+       //取消监听
+        emitter.off("itemImgLoad",this.itemImgListener)
     },
     deactivated(){
       console.log("detail leave")
@@ -99,6 +102,7 @@
          //3.请求推荐数据
          getRecommend().then(res=>{
             this.recommends=res.data.list;
+            console.log(this.recommends[0].image)
          })
     
     },

@@ -21,7 +21,7 @@
                    @itemClick="homeTabClick" 
                    ref="tabControl2" />
                    <!-- :class="{fixed:isTabFixed}" -->
-             <goods-list :goods="showGoodsList"></goods-list>
+             <goods-list :goods="showGoodsList" :which-page="0"></goods-list>
       </better-scroll>
       <!-- 组件事不能直接监听点击事件的，要想监听的话需要加".native",下面所示 -->
       <!-- v-show="true" 直接这样写不行，这是指令,有时候会把true当成一个变量,就算没被当成一个变量但是直接在这里写死了true也不好，没法控制显示与否，通过设置变量来确定什么时候显示，什么时候不显示 -->
@@ -78,7 +78,8 @@
         tabOffsetTop: 0,
         isTabFixed: false,
         saveY:0,
-        itemImgListener:null
+        itemImgListener:null,
+       
       }
     },
     computed: {
@@ -91,7 +92,9 @@
       //1.保存Y值
       //this.saveY=this.$refs.scroll.getCurrent()
        //2.取消全局事件的监听
-       emitter.bus$off("itemImgLoad",this.itemImgListener)
+        //vue3去掉了$on、$off后，使用mitt第三方库替代eventBus的原理。
+       //emitter.bus.$off("itemImgLoad",this.itemImgListener)
+      // emitter.off("itemImgLoad",this.itemImgListener)
     },
     deactivated(){
       console.log("home leave,记录位置")
@@ -128,7 +131,10 @@
       // emitter.on("itemImageLoad",()=>{
       //     refresh();
       // });
-       emitter.on("itemImageLoad");
+       emitter.on("itemImageLoad",()=>{
+          refresh();
+      });
+       //emitter.on("itemImageLoad");
 
       //2.获取tabControl的offsetTop
       //所有的组件都有一个属性$el:用于获取组件中的元素
