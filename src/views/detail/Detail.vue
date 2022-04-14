@@ -13,18 +13,7 @@
          <detail-base-info :goods="goods" />
          <detail-shop-info :shop="shop" />
          <detail-goods-info :detail-info="detailInfo" @imagesLoad="imagesLoad"/>
-         <!-- <ul>
-           <li>11111111111</li>
-           <li>11111111111</li>
-           <li>11111111111</li>
-           <li>11111111111</li>
-           <li>11111111111</li>
-           <li>11111111111</li>
-           <li>11111111111</li>
-           <li>11111111111</li>
-           <li>11111111111</li>
-
-         </ul> -->
+         <detail-param-info :param-info="paramInfo"></detail-param-info>
    </better-scroll>
   </div>
 </template>
@@ -35,13 +24,13 @@
  import DetailBaseInfo from "./childComps/DetailBaseInfo.vue"
  import DetailShopInfo from "./childComps/DetailShopInfo.vue"
  import DetailGoodsInfo from "./childComps/DetailGoodsInfo.vue"
-
+ import DetailParamInfo from "./childComps/DetailParamInfo.vue"
   //2.一些插件
  import BetterScroll from "components/common/scroll/BetterScroll.vue"
  //import emitter from "assets/utils/mitt.js";
 
  //3.一些方法
-  import {getDetail,Goods,Shop} from "network/detail.js"
+  import {getDetail,Goods,Shop,GoodsParam} from "network/detail.js"
   import {debounce} from "common/utils.js";
 
   export default{
@@ -52,7 +41,8 @@
           DetailBaseInfo,
           DetailShopInfo,
           BetterScroll,
-          DetailGoodsInfo
+          DetailGoodsInfo,
+          DetailParamInfo
       },
       data(){
           return{
@@ -60,7 +50,8 @@
               topImages:[],
               goods:{},
               shop:{},
-              detailInfo:{}
+              detailInfo:{},
+              paramInfo:{}//商品参数信息
           }
       },
       created(){
@@ -77,6 +68,8 @@
              this.shop=new Shop(data.shopInfo);
             //2.4保存商品详情数据
             this.detailInfo=data.detailInfo;
+            //2.5取出商品参数信息
+            this.paramInfo=new GoodsParam(data.itemParams.info,data.itemParams.rule);
             
          })
       },

@@ -84,6 +84,12 @@
 		    return this.goods[this.currentType].list
       }
     },
+    activated(){
+      console.log("home enter,设置位置")
+    },
+    deactivated(){
+      console.log("home leave,记录位置")
+    },
     created() {
       //created里拿不到标签的class名字 是undefined
       //console.log('创建Home');
@@ -97,6 +103,7 @@
 
       //在created()里this.$refs.aaa有可能拿不到，拿到的是空，导致报错,放到mounted()里面
       //3.监听item中图片加载完成
+      // Vue组件中父子组件通信，兄弟组件通信都很常见，而父子组件通信就很简单，父组件会通过props向下传递数据给子组件，当子组件有事情要告诉父组件时会通过$emit事件告诉父组件，那么如果说两个页面没有任何引入与被引入的关系，改如何通信呢？用事件总线
       //  emitter.on("itemImageLoad",()=>{
       //    this.$refs.scroll.refresh();
       //  });

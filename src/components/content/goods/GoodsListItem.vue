@@ -28,8 +28,16 @@ export default {
      },
      //跳转到详情页
      itemClick(){
-       //console.log("详情页");
-       this.$router.push("/detail/"+this.goodsItem.iid);
+       //两种方式配置路由传参数
+       //1.动态路由-用这个方法取iid的界面这样取this.$route.params.iid
+       this.$router.push("/detail/"+this.goodsItem.iid); 
+       //2.对象-用这个方法取iid的界面这样取this.$route.query.iid
+      //  this.$router.push({
+      //    path:"/detail",
+      //    query:{
+      //      iid:this.goodsItem.iid
+      //    }
+      //  })
      }
   },
   components: {//在components里注册组件后才能在模板里使用

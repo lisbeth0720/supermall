@@ -50,6 +50,7 @@
   }
   .title-item{
     flex:1;
+    font-size:3.73333vw;
   }
   .active{
     color:var(--color-high-text);
