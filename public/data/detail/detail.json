@@ -12,6 +12,20 @@
             "isLogin": false,
             "detailImage": [
                 {
+                    "anchor":"111",
+                    "desc":"202年新款",
+                    "key":"穿着效果",
+                    "list": [
+                        "https://img.alicdn.com/imgextra/i1/2133725026/O1CN011sAisA1mzxMjEBzC0_!!0-item_pic.jpg",
+                        "https://img.alicdn.com/imgextra/i1/2206472914739/O1CN01u1WVlY1ksVggxfIUv_!!2206472914739.jpg",
+                        "https://img.alicdn.com/imgextra/i3/2207285323466/O1CN019xk5ce1bTTT8Gv22t_!!0-item_pic.jpg_430x430q90.jpg",
+                        "https://img.alicdn.com/imgextra/i1/2212994938707/O1CN018d79oL2EBrI4P8Ltj_!!0-item_pic.jpg_430x430q90.jpg"
+                    ]
+                },
+                {
+                    "anchor":"111",
+                    "desc":"202年新款",
+                    "key":"细节做工",
                     "list": [
                         "https://img.alicdn.com/imgextra/i1/2133725026/O1CN011sAisA1mzxMjEBzC0_!!0-item_pic.jpg",
                         "https://img.alicdn.com/imgextra/i1/2206472914739/O1CN01u1WVlY1ksVggxfIUv_!!2206472914739.jpg",
@@ -121,7 +135,8 @@
                         "key": "潮流",
                         "value": "韩系"
                     }
-                ]
+                ],
+                "images":["https://gd3.alicdn.com/imgextra/i4/2212052221195/O1CN01hP59w91KhM0ZajyYl_!!2212052221195.jpg"]
             },
             "rule": {
                 "anchor": "size_info",
@@ -153,7 +168,29 @@
         },
         "rate": {
             "cRate": 144,
-            "list": []
+            "list": [
+                {
+                  "canExplain":false,
+                  "content":"刚好合适，物美价廉，衣服面料很好，穿着很舒服，版型也好看，非常棒。",
+                  "created":"1535694719",
+                  "extraInfo":"棒棒糖闯江湖",
+                  "images":["https://img.alicdn.com/imgextra/i2/0/O1CN01OnHlqI1okxdZQJGQQ_!!0-rate.jpg_400x400.jpg","https://img.alicdn.com/imgextra/i2/0/O1CN01ZyTMr21okxdlY7BIh_!!0-rate.jpg_400x400.jpg","https://img.alicdn.com/imgextra/i2/0/O1CN01WRMJSC1FO3G01sM8q_!!0-rate.jpg_400x400.jpg","https://img.alicdn.com/imgextra/i2/0/O1CN01Dt4lL71FO3G68cFH5_!!0-rate.jpg_400x400.jpg","https://img.alicdn.com/imgextra/i1/0/O1CN01XQrMRz1FO3G9cbtEx_!!0-rate.jpg_400x400.jpg"
+
+                  ],
+                  "isAnonymous":"棒棒糖闯江湖",
+                  "isEmpty":"棒棒糖闯江湖",
+                  "level":"棒棒糖闯江湖",
+                  "rateId":"棒棒糖闯江湖",
+                  "style":"棒棒糖闯江湖",
+                  "user":{
+                    "avatar":"https://wwc.alicdn.com/avatar/getAvatar.do?userIdStr=vFkSPFHuXH*evF8LPmHSXm9zPmcWv8c4vHQWvkcWOm9IPklzv0lhOHxLXmIYvGQu&width=40&height=40&type=sns"
+                }
+                }
+            ],
+            "user":{
+                "avatar":"棒棒糖闯江湖2",
+                "uname":"棒棒糖闯江湖2"
+            }
         },
         "shopInfo": {
             "allGoodsUrl": "http://m.meilishuo.com/shop/index/lo4juy",
@@ -204,10 +241,14 @@
         "skuInfo": {
             "defaultPrice": "￥29.98",
             "isAbroad": false,
-            "priceRange": "...."
+            "priceRange": "....",
+            "styleKey": "颜色",
+            "title": "2022年新款女装潮流",
+            "totalStock": "2326"
         },
         "topBar": {
-            "img": "//sll.mogucdn.com/p1/150811/upload_ieytsmbrmm4wkm"
+            "img": "//sll.mogucdn.com/p1/150811/upload_ieytsmbrmm4wkm3ggizdambqmeyde_226x43.png",
+            "link": "http://www.xiaodian.com/h5/download"
         }
     },
     "status": {

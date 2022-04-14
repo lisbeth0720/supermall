@@ -14,6 +14,7 @@
          <detail-shop-info :shop="shop" />
          <detail-goods-info :detail-info="detailInfo" @imagesLoad="imagesLoad"/>
          <detail-param-info :param-info="paramInfo"></detail-param-info>
+         <detail-comment-info :comment-info="commentInfo"></detail-comment-info>
    </better-scroll>
   </div>
 </template>
@@ -25,6 +26,7 @@
  import DetailShopInfo from "./childComps/DetailShopInfo.vue"
  import DetailGoodsInfo from "./childComps/DetailGoodsInfo.vue"
  import DetailParamInfo from "./childComps/DetailParamInfo.vue"
+ import DetailCommentInfo from "./childComps/DetailCommentInfo.vue"
   //2.一些插件
  import BetterScroll from "components/common/scroll/BetterScroll.vue"
  //import emitter from "assets/utils/mitt.js";
@@ -42,7 +44,8 @@
           DetailShopInfo,
           BetterScroll,
           DetailGoodsInfo,
-          DetailParamInfo
+          DetailParamInfo,
+          DetailCommentInfo
       },
       data(){
           return{
@@ -51,7 +54,8 @@
               goods:{},
               shop:{},
               detailInfo:{},
-              paramInfo:{}//商品参数信息
+              paramInfo:{},//商品参数信息
+              commentInfo:{}//商品评论信息
           }
       },
       created(){
@@ -70,6 +74,11 @@
             this.detailInfo=data.detailInfo;
             //2.5取出商品参数信息
             this.paramInfo=new GoodsParam(data.itemParams.info,data.itemParams.rule);
+            //2.6取出商品评论信息-评论信息不一定有 所以需要加判断
+            if(data.rate.cRate!==0){
+              //当某个商品有多条评论的时候，这里虽然有多条评论信息，但是只需要展示一条，当点击更多的时候展示全部的 全部评论会在更一个界面
+               this.commentInfo=data.rate.list[0];
+            }
             
          })
       },
