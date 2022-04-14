@@ -61,9 +61,17 @@
               detailInfo:{},
               paramInfo:{},//商品参数信息
               commentInfo:{},//商品评论信息
-              recommends:[]//商品推荐信息
+              recommends:[],//商品推荐信息
+              itemImgListener:null
           }
       },
+   activated(){
+       //1.取消全局事件的监听
+       emitter.bus$off("itemImgLoad",this.itemImgListener)
+    },
+    deactivated(){
+      console.log("detail leave")
+    },
       created(){
         //1.保存传入的iid
           this.iid=this.$route.params.iid;
@@ -101,9 +109,11 @@
       //  });
       //处理this.$refs.scroll.refresh();调用频繁的问题
        const refresh = debounce(this.$refs.scroll.refresh,200);
-      //  emitter.on("shopGoodsImageLoad",()=>{
-      //     refresh();
-      //  });
+     //对监听的事件进行保存 
+      this.itemImgListener=()=>{
+          refresh();
+      }
+       emitter.on("itemImageLoad");
      },
      methods:{
        imagesLoad(){

@@ -77,6 +77,8 @@
         isShowBackTop: false,
         tabOffsetTop: 0,
         isTabFixed: false,
+        saveY:0,
+        itemImgListener:null
       }
     },
     computed: {
@@ -85,7 +87,11 @@
       }
     },
     activated(){
-      console.log("home enter,设置位置")
+      console.log("home enter,设置位置");
+      //1.保存Y值
+      //this.saveY=this.$refs.scroll.getCurrent()
+       //2.取消全局事件的监听
+       emitter.bus$off("itemImgLoad",this.itemImgListener)
     },
     deactivated(){
       console.log("home leave,记录位置")
@@ -115,9 +121,14 @@
       //  });
       //处理this.$refs.scroll.refresh();调用频繁的问题
       const refresh = debounce(this.$refs.scroll.refresh,200);
-      emitter.on("itemImageLoad",()=>{
+      //对监听的事件进行保存 
+      this.itemImgListener=()=>{
           refresh();
-      });
+      }
+      // emitter.on("itemImageLoad",()=>{
+      //     refresh();
+      // });
+       emitter.on("itemImageLoad");
 
       //2.获取tabControl的offsetTop
       //所有的组件都有一个属性$el:用于获取组件中的元素

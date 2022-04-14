@@ -29,7 +29,17 @@ export default {
   methods:{
     //监听图片加载完成后-要执行的操作
      imageLoad(){
-        emitter.emit("itemImageLoad");
+        //emitter.emit("itemImageLoad");
+        //方法一：需要间隔判断来表示将这个事件发送给谁，发送给哪个界面
+        // if(this.$router.path.indexOf("/home")){
+        //    emitter.emit("homeItemImageLoad");
+        // }else if(this.$router.path.indexOf("/detail")){
+        //     emitter.emit("detailItemImageLoad");
+        // }
+
+        //方法二：需要间隔判断来表示将这个事件发送给谁，发送给哪个界面 -emitter.emit("itemImageLoad");当进入哪个界面那个界面接受这个事件，其他界面就不需要监听了，即当发现离开此界面的时候取消监听这个事件
+         emitter.emit("itemImageLoad");
+
      },
      //跳转到详情页
      itemClick(){
