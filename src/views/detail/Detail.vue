@@ -13,8 +13,9 @@
          <detail-base-info :goods="goods" />
          <detail-shop-info :shop="shop" />
          <detail-goods-info :detail-info="detailInfo" @imagesLoad="imagesLoad"/>
-         <detail-param-info :param-info="paramInfo"></detail-param-info>
-         <detail-comment-info :comment-info="commentInfo"></detail-comment-info>
+         <detail-param-info :param-info="paramInfo" />
+         <detail-comment-info :comment-info="commentInfo" />
+         <goods-list :goods="recommends"/>
    </better-scroll>
   </div>
 </template>
@@ -27,12 +28,15 @@
  import DetailGoodsInfo from "./childComps/DetailGoodsInfo.vue"
  import DetailParamInfo from "./childComps/DetailParamInfo.vue"
  import DetailCommentInfo from "./childComps/DetailCommentInfo.vue"
-  //2.一些插件
+
+  //2.一些插件或公共组件
  import BetterScroll from "components/common/scroll/BetterScroll.vue"
+ import GoodsList from "components/content/goods/GoodsList.vue"
+
  //import emitter from "assets/utils/mitt.js";
 
  //3.一些方法
-  import {getDetail,Goods,Shop,GoodsParam} from "network/detail.js"
+  import {getDetail,Goods,Shop,GoodsParam,getRecommend} from "network/detail.js"
   import {debounce} from "common/utils.js";
 
   export default{
@@ -45,7 +49,8 @@
           BetterScroll,
           DetailGoodsInfo,
           DetailParamInfo,
-          DetailCommentInfo
+          DetailCommentInfo,
+          GoodsList
       },
       data(){
           return{
@@ -55,7 +60,8 @@
               shop:{},
               detailInfo:{},
               paramInfo:{},//商品参数信息
-              commentInfo:{}//商品评论信息
+              commentInfo:{},//商品评论信息
+              recommends:[]//商品推荐信息
           }
       },
       created(){
@@ -81,7 +87,13 @@
             }
             
          })
-      },
+     
+         //3.请求推荐数据
+         getRecommend().then(res=>{
+            this.recommends=res.data.list;
+         })
+    
+    },
       mounted(){
       //1.监听item中图片加载完成
       //  emitter.on("itemImageLoad",()=>{

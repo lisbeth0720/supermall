@@ -63,3 +63,25 @@ export class Goods {
         
       }
    }
+  //获取商品推荐信息
+   export function getRecommend(){
+    // return request({
+    //      url:'/recomment'
+    // })
+    //axios请求本地数据，需要把数据放到public文件夹下，public是向外曝露的服务器路径，但在引用时，不用写“public”
+    var url = window.location.href;//网页地址
+    var serverUrl = "http://"+(url.split("//")[1]).split("/")[0]+"/"+(url.split("//")[1]).split("/")[1];//服务器地址
+    if(serverUrl.indexOf("#")>=0){
+        serverUrl=serverUrl.split("#")[0]
+    }
+    if (serverUrl.indexOf("localhost") >= 0) {
+          //serverUrl = "http://localhost:8080"
+     }else{
+          serverUrl=serverUrl+"/dist";
+     }
+    
+    let newUrl=serverUrl+"/data/detail/recommend.json";
+    return request({
+         url:newUrl
+    })
+}
