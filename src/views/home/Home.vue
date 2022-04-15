@@ -46,10 +46,11 @@
   
   //3.一些方法
   import {getHomeMultidata,getHomeGoods} from "network/home.js";
-  import {debounce} from "common/utils.js";
+  //import {debounce} from "common/utils.js";
+  import {itemListenerMixin} from "common/mixin.js";
 
-  //4.一些插件
-  import emitter from "assets/utils/mitt.js"
+  //4.一些插件-下面的进行了封装
+  //import emitter from "assets/utils/mitt.js"
 
   export default {
 		name: "Home",
@@ -64,6 +65,7 @@
       BetterScroll,
       BackTop,
     },
+    mixins:[itemListenerMixin],
     data() {
 		  return {
 		    banners: [],
@@ -78,7 +80,7 @@
         tabOffsetTop: 0,
         isTabFixed: false,
         saveY:0,
-        itemImgListener:null,
+       // itemImgListener:null,
 
       }
     },
@@ -91,10 +93,6 @@
       console.log("home enter,设置位置");
       //1.保存Y值
       //this.saveY=this.$refs.scroll.getCurrent()
-       //2.取消全局事件的监听
-        //vue3去掉了$on、$off后，使用mitt第三方库替代eventBus的原理。
-       //emitter.bus.$off("itemImgLoad",this.itemImgListener)
-       emitter.off("itemImgLoad",this.itemImgListener);
     },
     deactivated(){
       console.log("home leave,记录位置")
@@ -109,7 +107,6 @@
       this.getHomeGoods("new")
       this.getHomeGoods("sell")
       
-
       //在created()里this.$refs.aaa有可能拿不到，拿到的是空，导致报错,放到mounted()里面
       //3.监听item中图片加载完成
       // Vue组件中父子组件通信，兄弟组件通信都很常见，而父子组件通信就很简单，父组件会通过props向下传递数据给子组件，当子组件有事情要告诉父组件时会通过$emit事件告诉父组件，那么如果说两个页面没有任何引入与被引入的关系，改如何通信呢？用事件总线
@@ -123,17 +120,14 @@
       //    this.$refs.scroll.refresh();
       //  });
       //处理this.$refs.scroll.refresh();调用频繁的问题
-      const refresh = debounce(this.$refs.scroll.refresh,200);
-      //对监听的事件进行保存 
-      this.itemImgListener=()=>{
-          refresh();
-      }
-      // emitter.on("itemImageLoad",()=>{
+       //下面的代码由于和home.vue中的一样，所以进行了封装用了xinmin混入写法，具体代码在mixin.js里
+      // const refresh = debounce(this.$refs.scroll.refresh,200);
+      // //对监听的事件进行保存 
+      // this.itemImgListener=()=>{
       //     refresh();
-      // });
-       emitter.on("itemImageLoad",this.itemImgListener);
-       //emitter.on("itemImageLoad");
-
+      // }
+      //  emitter.on("itemImageLoad",this.itemImgListener);
+      
       //2.获取tabControl的offsetTop
       //所有的组件都有一个属性$el:用于获取组件中的元素
       //在mounted()里拿到的offsetTop不准，这时候组件事挂载完成了，但是图片并没加载完成
@@ -150,6 +144,14 @@
     //    //this.tabOffsetTop = this.$refs.tabControl2.$el.offsetTop
     //   // console.log(this.tabOffsetTop);
     // },
+    destroyed(){
+        //2.取消全局事件的监听
+        //vue3去掉了$on、$off后，使用mitt第三方库替代eventBus的原理。
+       //this.$bus.$off("itemImgLoad",this.itemImgListener)
+       //用mitt插件中的off
+       //emitter.off("itemImgLoad",this.itemImgListener);
+       emitter.off("itemImgLoad",this.itemListenerMixin);
+    },
     methods: {
       // 1.事件监听方法
 		  homeTabClick(index) { //分类导航

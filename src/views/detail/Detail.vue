@@ -32,12 +32,12 @@
   //2.一些插件或公共组件
  import BetterScroll from "components/common/scroll/BetterScroll.vue"
  import GoodsList from "components/content/goods/GoodsList.vue"
-
- import emitter from "assets/utils/mitt.js";
+ //import emitter from "assets/utils/mitt.js";
+import {itemListenerMixin} from "common/mixin.js";
 
  //3.一些方法
   import {getDetail,Goods,Shop,GoodsParam,getRecommend} from "network/detail.js"
-  import {debounce} from "common/utils.js";
+  //import {debounce} from "common/utils.js";
 
   export default{
       name:"Detail",
@@ -52,6 +52,7 @@
           DetailCommentInfo,
           GoodsList
       },
+      mixins:[itemListenerMixin],
       data(){
           return{
               iid:null,
@@ -62,15 +63,11 @@
               paramInfo:{},//商品参数信息
               commentInfo:{},//商品评论信息
               recommends:[],//商品推荐信息
-              itemImgListener:null
+              //itemImgListener:null
           }
       },
    activated(){
-       //1.取消全局事件的监听
-       //vue3去掉了$on、$off后，使用mitt第三方库替代eventBus的原理。
-       //emitter.bus.$off("itemImgLoad",this.itemImgListener);
-       //取消监听
-        emitter.off("itemImgLoad",this.itemImgListener)
+      
     },
     deactivated(){
       console.log("detail leave")
@@ -112,18 +109,28 @@
       //    this.$refs.scroll.refresh();
       //  });
       //处理this.$refs.scroll.refresh();调用频繁的问题
-       const refresh = debounce(this.$refs.scroll.refresh,200);
-     //对监听的事件进行保存 
-      this.itemImgListener=()=>{
-          refresh();
-      }
-       emitter.on("itemImageLoad",this.itemImgListener);
+      //下面的代码由于和home.vue中的一样，所以进行了封装用了xinmin混入写法，具体代码在mixin.js里
+    //    const refresh = debounce(this.$refs.scroll.refresh,200);
+    //  //对监听的事件进行保存 
+    //   this.itemImgListener=()=>{
+    //       refresh();
+    //   }
+    //    emitter.on("itemImageLoad",this.itemImgListener);
      },
      methods:{
        imagesLoad(){
          this.$refs.scroll.refresh();
        }
-     }
+     },
+     destroyed(){
+        //2.取消全局事件的监听
+        //vue3去掉了$on、$off后，使用mitt第三方库替代eventBus的原理。
+       //this.$bus.$off("itemImgLoad",this.itemImgListener)
+
+        //用mitt插件中的off
+       //emitter.off("itemImgLoad",this.itemImgListener);
+       emitter.off("itemImgLoad",this.itemListenerMixin);
+    }
   }
 </script>
 <style scoped>
