@@ -26,35 +26,35 @@ const routes=[
     path:'/home',
     component:Home,
     meta:{
-      keepAlive:true
+      keepAlive:true//组件需要缓存
     }
   },
    {
     path:'/category',
     component:Category,
     meta:{
-      keepAlive:true
+      keepAlive:true//组件需要缓存
     }
   },
   {
     path:'/cart',
     component:Cart,
     meta:{
-      keepAlive:true
+      keepAlive:true//组件需要缓存
     }
   },
   {
     path:'/profile',
     component:Profile,
     meta:{
-      keepAlive:true
+      keepAlive:true//组件需要缓存
     }
   },
   {
     path:'/detail/:iid',
     component:Detail,
     meta:{
-      keepAlive:false
+      keepAlive:false//组件不需要缓存
     }
   }
 ]

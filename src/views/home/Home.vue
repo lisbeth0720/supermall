@@ -91,11 +91,16 @@
     },
     activated(){
       console.log("home enter,设置位置");
-      //1.保存Y值
-      //this.saveY=this.$refs.scroll.getCurrent()
+      //设置位置
+      console.log(this.saveY)
+      this.$refs.scroll.scrollTo(0,this.saveY,0)
     },
     deactivated(){
       console.log("home leave,记录位置")
+       //记录位置
+      this.saveY=this.$refs.scroll.getScrollY();
+      
+      console.log(this.saveY)
     },
     created() {
       //created里拿不到标签的class名字 是undefined

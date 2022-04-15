@@ -1,5 +1,5 @@
 <template>
-  <!-- <div id="app"> -->
+  <div class="app">
     <!-- <keep-alive>的作用是不被销毁，切换到这个界面的时候保持切换前的状态  -->
       <!-- vue 2x的写法 -->
     <!-- <keep-alive>
@@ -9,13 +9,13 @@
       <!-- vue 3x的写法 -->
     
    <router-view v-slot="{Component}">
-     <keep-alive>
+     <keep-alive :exclude="Detail">
        <component :is="Component" />
      </keep-alive>
    </router-view>
     
     <main-tab-bar></main-tab-bar>
-  <!-- </div> -->
+  </div>
 </template>
 
 <script>

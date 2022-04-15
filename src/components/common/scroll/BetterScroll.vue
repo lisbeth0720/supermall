@@ -76,6 +76,12 @@
          finishPullUp(){
              this.bscroll.finishPullUp();
          }, 
+         scrollTo(x,y,time){
+            this.bscroll&&this.bscroll.scrollTo&&this.bscroll.scrollTo(x,y,time);
+         },
+         getScrollY(){
+            return this.bscroll?this.bscroll.y:0;
+         }
      }
 }
 </script>
