@@ -6,7 +6,7 @@
       <tab-control class="tab-control"
                    :titles="['流行', '新款', '精选']"
                    @itemClick="homeTabClick" 
-                   ref="tabControl1"
+                   ref="topTabControl"
                    v-show="isTabFixed" />
       <better-scroll class="content" 
                      ref="scroll" 
@@ -19,7 +19,7 @@
             <feature-view></feature-view>
             <tab-control :titles="['流行', '新款', '精选']"
                    @itemClick="homeTabClick" 
-                   ref="tabControl2" />
+                   ref="tabControl" />
                    <!-- :class="{fixed:isTabFixed}" -->
              <goods-list :goods="showGoodsList" :which-page="0"></goods-list>
       </better-scroll>
@@ -99,8 +99,6 @@
       console.log("home leave,记录位置")
        //记录位置
       this.saveY=this.$refs.scroll.getScrollY();
-      
-      console.log(this.saveY)
     },
     created() {
       //created里拿不到标签的class名字 是undefined
@@ -118,6 +116,8 @@
       //  emitter.on("itemImageLoad",()=>{
       //    this.$refs.scroll.refresh();
       //  });
+      //因为在这里执行了一次homeTabClick 所以需要在homeTabClick方法里加个判断this.$refs.topTabControl.currentIndex!==undefined 不加的话 created()执行的时候this.$refs.topTabControl.currentIndex=undefined
+      //this.homeTabClick(0)
     },
     mounted(){
       //1.监听item中图片加载完成
@@ -125,11 +125,11 @@
       //    this.$refs.scroll.refresh();
       //  });
       //处理this.$refs.scroll.refresh();调用频繁的问题
-       //下面的代码由于和home.vue中的一样，所以进行了封装用了xinmin混入写法，具体代码在mixin.js里
-      // const refresh = debounce(this.$refs.scroll.refresh,200);
+       //下面的代码由于和home.vue和detail.vue中的一样，所以进行了封装用了xinmin混入写法，具体代码在mixin.js里
+      // const newRefresh = debounce(this.$refs.scroll.refresh,200);
       // //对监听的事件进行保存 
       // this.itemImgListener=()=>{
-      //     refresh();
+      //     newRefresh();
       // }
       //  emitter.on("itemImageLoad",this.itemImgListener);
       
@@ -138,6 +138,8 @@
       //在mounted()里拿到的offsetTop不准，这时候组件事挂载完成了，但是图片并没加载完成
       //所以需要图片加载完成后计算出真正的高度才对
       // this.tobOffsetTop=this.$refs.tabControl.$el.offsetTop;
+
+       this.homeTabClick(0)
     },
     // activated: function () {
     //   this.$refs.hSwiper.startTimer()
@@ -146,7 +148,7 @@
     //   this.$refs.hSwiper.stopTimer()
     // },
     // updated() {
-    //    //this.tabOffsetTop = this.$refs.tabControl2.$el.offsetTop
+    //    //this.tabOffsetTop = this.$refs.tabControl.$el.offsetTop
     //   // console.log(this.tabOffsetTop);
     // },
     destroyed(){
@@ -171,8 +173,14 @@
             this.currentType = "sell"
             break
         }
-        this.$refs.tabControl1.currentIndex=index;
-        this.$refs.tabControl2.currentIndex=index;
+        this.showGoodsList=this.goods[this.currentType].list
+        
+        //让两个tabControl的currentIndex保持一致
+        //加判断的原因是因为在created()执行了一次homeTabClick(0) 此时this.$refs.topTabControl.currentIndex=undefined 解决此问题有两种方法。第一中是加个判断this.$refs.topTabControl.currentIndex!==undefined；第二种是不要在created()执行了一次homeTabClick(0)，在mounted()组件挂载完成的时候执行homeTabClick(0) 
+       // if(this.$refs.topTabControl.currentIndex!==undefined){
+          this.$refs.topTabControl.currentIndex=index;
+          this.$refs.tabControl.currentIndex=index;
+       // }
       },
       backTop(){ //回到顶部
         //下面两种方式都能实现回到顶部
@@ -201,7 +209,7 @@
       },
       swiperImageLoad (){
         //只需要拿到一次就好
-        this.tabOffsetTop=this.$refs.tabControl2.$el.offsetTop;
+        this.tabOffsetTop=this.$refs.tabControl.$el.offsetTop;
         //console.log(this.tabOffsetTop)
       },
 

@@ -19,8 +19,6 @@
 </template>
 
 <script>
-  //import emitter from "assets/utils/mitt.js";
-
 	export default {
 		name: "DetailGoodsInfo",
     props: {
@@ -39,8 +37,7 @@
         //因为这里的图片是竖排，所以每一张都会影响better-scroll滚动的高度，所以需要计算有多少张图片
         //当所有的图片都加载完成后进行一次回调就好
         if(++this.counter===this.imagesLength){
-            //emitter.emit("shopGoodsImageLoad");
-            this.$emit("imagesLoad");
+            this.$emit("detailImagesLoad");
         }
        
      }

@@ -66,7 +66,7 @@
             this.bscroll&&this.bscroll.scrollTo&&this.bscroll.scrollTo(0,0,time);
          },
          refresh(){
-            //console.log("----")
+            console.log("----")
              //this.bscroll.refresh();
              //下面这段代码和上面的区别是，
             //下面的是当bscroll对象创建实例完成后才执行refresh(0,0,time);

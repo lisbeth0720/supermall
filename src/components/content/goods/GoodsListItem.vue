@@ -53,7 +53,7 @@ export default {
     //监听图片加载完成后-要执行的操作
      imageLoad(){
         //emitter.emit("itemImageLoad");
-        //方法一：需要间隔判断来表示将这个事件发送给谁，发送给哪个界面
+        //方法一：需要判断表示将这个事件发送给谁，发送给哪个界面
         // if(this.$router.path.indexOf("/home")){
         //    emitter.emit("homeItemImageLoad");
         // }else if(this.$router.path.indexOf("/detail")){

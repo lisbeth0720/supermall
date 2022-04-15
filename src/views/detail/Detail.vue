@@ -12,7 +12,7 @@
                    :goods="goods"/>
          <detail-base-info :goods="goods" />
          <detail-shop-info :shop="shop" />
-         <detail-goods-info :detail-info="detailInfo" @imagesLoad="imagesLoad"/>
+         <detail-goods-info :detail-info="detailInfo" @detail-images-load="imagesLoad"/>
          <detail-param-info :param-info="paramInfo" />
          <detail-comment-info :comment-info="commentInfo" />
          <goods-list :goods="recommends" :which-page="1"/>
@@ -70,7 +70,7 @@ import {itemListenerMixin} from "common/mixin.js";
       
     },
     deactivated(){
-      console.log("detail leave")
+      //console.log("detail leave")
     },
       created(){
         //1.保存传入的iid
@@ -110,16 +110,18 @@ import {itemListenerMixin} from "common/mixin.js";
       //  });
       //处理this.$refs.scroll.refresh();调用频繁的问题
       //下面的代码由于和home.vue中的一样，所以进行了封装用了xinmin混入写法，具体代码在mixin.js里
-    //    const refresh = debounce(this.$refs.scroll.refresh,200);
+    //    const newRefresh = debounce(this.$refs.scroll.refresh,200);
     //  //对监听的事件进行保存 
     //   this.itemImgListener=()=>{
-    //       refresh();
+    //       newRefresh();
     //   }
     //    emitter.on("itemImageLoad",this.itemImgListener);
      },
      methods:{
        imagesLoad(){
-         this.$refs.scroll.refresh();
+         //this.$refs.scroll.refresh();
+        //做防抖操作，不用刷新太多次-this.$refs.scroll.refresh();进行了防抖和封装操作，具体代码在mixin.js里
+          this.newRefresh();
        }
      },
      destroyed(){
