@@ -79,7 +79,7 @@
         isTabFixed: false,
         saveY:0,
         itemImgListener:null,
-       
+
       }
     },
     computed: {
@@ -94,7 +94,7 @@
        //2.取消全局事件的监听
         //vue3去掉了$on、$off后，使用mitt第三方库替代eventBus的原理。
        //emitter.bus.$off("itemImgLoad",this.itemImgListener)
-      // emitter.off("itemImgLoad",this.itemImgListener)
+       emitter.off("itemImgLoad",this.itemImgListener);
     },
     deactivated(){
       console.log("home leave,记录位置")
@@ -131,9 +131,7 @@
       // emitter.on("itemImageLoad",()=>{
       //     refresh();
       // });
-       emitter.on("itemImageLoad",()=>{
-          refresh();
-      });
+       emitter.on("itemImageLoad",this.itemImgListener);
        //emitter.on("itemImageLoad");
 
       //2.获取tabControl的offsetTop

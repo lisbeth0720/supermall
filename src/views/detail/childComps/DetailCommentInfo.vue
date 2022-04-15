@@ -15,11 +15,13 @@
       <div class="info-detail">
         <p>{{commentInfo.content}}</p>
         <div class="info-other">
-          <span class="date">{{commentInfo.created | showDate}}</span>
+          <!-- //下面的写法不起作用-因为vue3不支持过滤器 -->
+          <!-- <span class="date">{{commentInfo.created | showDate}}</span> -->
+          <span class="date">{{commentTime}}</span>
           <span>{{commentInfo.style}}</span>
         </div>
         <div class="info-imgs">
-          <img :src="item" v-for="(item, index) in commentInfo.images">
+          <img :src="item" v-for="(item, index) in commentInfo.images" :key="index"/>
         </div>
       </div>
     </div>
@@ -37,10 +39,16 @@
       }
     },
     filters: {
-		  showDate: function (value) {
-        let date = new Date(value*1000);
-        return formatDate(date, 'yyyy-MM-dd')
-        console.log(formatDate(date, 'yyyy-MM-dd'))
+      //下面的写法不起作用-因为vue3不支持过滤器-改成用计算属性解决这个问题
+		  // showDate: function (value) {
+      //   let date = new Date(value*1000);
+      //   return formatDate(date, 'yyyy-MM-dd')
+      // }
+    },
+    computed:{
+      commentTime(){
+         let date = new Date(this.commentInfo.created*1000);
+         return formatDate(date, 'yyyy-MM-dd');
       }
     }
 	}

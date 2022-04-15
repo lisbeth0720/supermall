@@ -102,7 +102,7 @@
          //3.请求推荐数据
          getRecommend().then(res=>{
             this.recommends=res.data.list;
-            console.log(this.recommends[0].image)
+            //console.log(this.recommends[0].image)
          })
     
     },
@@ -117,7 +117,7 @@
       this.itemImgListener=()=>{
           refresh();
       }
-       emitter.on("itemImageLoad");
+       emitter.on("itemImageLoad",this.itemImgListener);
      },
      methods:{
        imagesLoad(){

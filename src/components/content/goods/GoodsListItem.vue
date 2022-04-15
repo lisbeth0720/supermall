@@ -20,27 +20,26 @@ export default {
              return {}
          }
      },
-    whichPage:{//自己写的用于区分哪一页
+    whichPage2:{//自己写的用于区分哪一页0是首页，=1详情页
        type:Number
     }
   },
   data(){
     return{
-      whichPage:""
+      
     }
   },
   computed:{
      showImage(){
-      // return this.goodsItem.show.image||this.goodsItem.image
+      // return this.goodsItem.show.img||this.goodsItem.image
        //需要判断是首页还是详情页，因为数据格式不一样，在哪一页取那一页的数据
        //const imgSrc="";
-      // console.log(this.goodsItem.show.image)
-       if(this.whichPage==0){
-          return this.goodsItem.show.image//首页数据
+       if(this.whichPage2==0){
+          return this.goodsItem.show.img//首页数据
        }else{
          return this.goodsItem.image//详情页
        }
-       //console.log(this.whichPage)
+       //console.log(this.whichPage2)
       //  if(this.$router.path.indexOf("/home")){
       //      imgSrc=this.goodsItem.show.image//首页数据
       //   }else if(this.$router.path.indexOf("/detail")){
@@ -63,7 +62,6 @@ export default {
 
         //方法二：需要间隔判断来表示将这个事件发送给谁，发送给哪个界面 -emitter.emit("itemImageLoad");当进入哪个界面那个界面接受这个事件，其他界面就不需要监听了，即当发现离开此界面的时候取消监听这个事件
          emitter.emit("itemImageLoad");
-
      },
      //跳转到详情页
      itemClick(){
