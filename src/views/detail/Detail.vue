@@ -2,7 +2,7 @@
   <div id="detail">
     <!-- @title-click也可写成@titleClick 但是属性中最好用"-"不要用驼峰:probe-type="3"-->
     <detail-nav-bar class="detail-nav" 
-                    @title-click="titleClick"/>
+                    @title-click="titleClick" ref="nav"/>
     <!-- 注意用better-scorll的时候必须给外层div一个高度 -->
     <!-- :pull-up-load="true" 这个必传，不传不滚动-->
     <better-scroll class="content"
@@ -68,7 +68,8 @@ import {itemListenerMixin} from "common/mixin.js";
               //itemImgListener:null
               bsMaxScrollY:0, //better-scroll最大高度，检测是否滚到底部
               themeTopYs:[],//顶部导航分类下的每个分类的开始区域的Y值，用于实现点击分类按钮滚动到对应的y值位置
-              getThemeTopY:null
+              getThemeTopY:null,
+              currentIndex:0
           }
       },
    activated(){
@@ -189,10 +190,41 @@ import {itemListenerMixin} from "common/mixin.js";
        //监听better-scroll滚动事件
        contentScroll(position){
          //1.判断是否滚动到底部了
-         console.log(this.bsMaxScrollY,position.y)
-         
-        if(this.bsMaxScrollY<=position.y){
+        //if(this.bsMaxScrollY==position.y){
            //alert("抱歉，我是有底线的")
+        // }
+          //2.1获取y值
+          const positionY=-position.y
+          //2.2 positionY和主题中的值进行对比
+         // [0,2643,3463,3755]
+         // positionY在0-2643之间，index=0
+         // positionY在2643-3463之间，index=1
+         // positionY在3463-3755之间，index=2
+         // positionY超过3755，index=3
+         for(let i in this.themeTopYs){//用es6中的方法遍历的话得到的i是个支付串类型
+            i=i*1;//为了转变成number
+            //  if(i<this.themeTopYs.length-1){
+            //    if(positionY>this.themeTopYs[i]&&positionY<this.themeTopYs[i+1]) {
+            //       console.log(i)
+            //    }
+            //  }else if(i==this.themeTopYs.length-1){//最后一个值
+            //    if(positionY>this.themeTopYs[i]) {
+            //       console.log(i)
+            //    }
+            //  }
+            //上面代码的另一种写法
+            let length=this.themeTopYs.length;
+            //下面的执行太频繁了
+            // if((i<length-1&&positionY>this.themeTopYs[i]&&positionY<this.themeTopYs[i+1])||(i==length-1&&positionY>this.themeTopYs[i])){
+            //         console.log(i)
+            // }
+            //处理太频繁的问题，加判断this.currentIndex!==i
+             if(this.currentIndex!==i&&((i<length-1&&positionY>this.themeTopYs[i]&&positionY<this.themeTopYs[i+1])||(i==length-1&&positionY>this.themeTopYs[i]))){
+                    this.currentIndex=i;
+                    console.log(i)
+                    //this.$refs.nav.currentIndex 这样能取到组件this.$refs.nav中的变量currentIndex
+                    this.$refs.nav.currentIndex=this.currentIndex;
+            }
          }
          
       },
