@@ -1,4 +1,16 @@
 //公共的方法
+
+//1.防抖动函数
+export function debounce(func,delay=50){
+  let timer = null;
+  return function (...args){//"..."的意思是可以传入多个参数
+     if(timer) clearTimeout(timer);
+     timer=setTimeout(()=>{
+       func.apply(this,args)
+     },delay)
+  }
+}
+
 //将时间戳转变成时间格式化字符串(真正开发的时候服务器一般从数据库里去的数据返给前端时间格式是时间戳1535694719这样，前端根据需求进行转化，2022-04-01还是2022/04/01)
 //formatDate(new Date(1535694719*1000), 'yyyy-MM-dd')
 //1.先将时间戳转变成Date的对象-const date=new Date(1535694719*1000)
@@ -25,16 +37,6 @@ export function formatDate(date, fmt) {
    }
    return fmt;
  };
-//1.防抖动函数
-export function debounce(func,delay){
-    let timer = null;
-    return function (...args){//"..."的意思是可以传入多个参数
-       if(timer) clearTimeout(timer);
-       timer=setTimeout(()=>{
-         func.apply(this,args)
-       },delay)
-    }
- }
 
  function padLeftZero(str){
     return ('00'+str).substr(str.length);

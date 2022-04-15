@@ -183,7 +183,8 @@
                   "rateId":"棒棒糖闯江湖",
                   "style":"棒棒糖闯江湖",
                   "user":{
-                    "avatar":"https://wwc.alicdn.com/avatar/getAvatar.do?userIdStr=vFkSPFHuXH*evF8LPmHSXm9zPmcWv8c4vHQWvkcWOm9IPklzv0lhOHxLXmIYvGQu&width=40&height=40&type=sns"
+                    "avatar":"https://wwc.alicdn.com/avatar/getAvatar.do?userIdStr=vFkSPFHuXH*evF8LPmHSXm9zPmcWv8c4vHQWvkcWOm9IPklzv0lhOHxLXmIYvGQu&width=40&height=40&type=sns",
+                    "uname":"棒棒糖闯江湖"
                 }
                 }
             ],

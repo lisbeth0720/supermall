@@ -23,7 +23,8 @@
       },
       data() {
          return {
-           bscroll: null
+           bscroll: null,
+           //bsMaxScrollY:0 //
          };
       },
       mounted(){//组件挂载完之后
@@ -66,7 +67,9 @@
             this.bscroll&&this.bscroll.scrollTo&&this.bscroll.scrollTo(0,0,time);
          },
          refresh(){
-            console.log("----")
+            //console.log("----");
+            //获取scroll的滚动后高度，当到最底部的时候可以加个提示语，“我是有底线的"
+            //this.bsMaxScrollY=document.getElementsByClassName("wrapper")[0].offsetHeight;
              //this.bscroll.refresh();
              //下面这段代码和上面的区别是，
             //下面的是当bscroll对象创建实例完成后才执行refresh(0,0,time);

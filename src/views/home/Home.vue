@@ -208,7 +208,7 @@
 		    this.getHomeGoods(this.currentType);
       },
       swiperImageLoad (){
-        //只需要拿到一次就好
+        //只需要拿到一次就好-用$el的原因是因为this.$refs.tabControl是组件不能通过this.$refs.tabControl.offsetTop;来拿到值，组件需要加$el
         this.tabOffsetTop=this.$refs.tabControl.$el.offsetTop;
         //console.log(this.tabOffsetTop)
       },
