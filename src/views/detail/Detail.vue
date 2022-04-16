@@ -58,7 +58,10 @@
      // Vue3中store类似于Vue2中this.$store
      // useStore()方法创建store对象，相当于src/store/index.js中的store实例对象
      const store = useStore()
-     console.log(store.state.carList) 
+     //vue 3x 中的写法
+     //console.log(store.state.carList) 
+     //vue 2x的写法
+     //console.log($store.state.carList)
      // 修改info的值
      const handleClick = () => {
          // 触发mutations，用于同步修改state的信息
