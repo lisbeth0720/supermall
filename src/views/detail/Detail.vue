@@ -45,12 +45,29 @@
  import BackTop from 'components/content/backTop/BackTop'
   import {BACK_POSITION} from "common/const.js"
 
+  import { useStore } from 'vuex'
+  
  //3.一些方法
   import {getDetail,Goods,Shop,GoodsParam,getRecommend} from "network/detail.js"
   import {debounce} from "common/utils.js";
 
   export default{
       name:"Detail",
+      setup () {
+     // this.$store.state.info
+     // Vue3中store类似于Vue2中this.$store
+     // useStore()方法创建store对象，相当于src/store/index.js中的store实例对象
+     const store = useStore()
+     console.log(store.state.carList) 
+     // 修改info的值
+     const handleClick = () => {
+         // 触发mutations，用于同步修改state的信息
+         // store.commit('updateInfo', 'nihao')
+         // 触发actions，用于异步修改state的信息
+         //store.dispatch('updateInfo', 'hi')
+     }
+     return { handleClick }
+     },
       components:{
           DetailNavBar,
           DetailSwiper,
@@ -251,8 +268,8 @@
         const obj = {}
         // 2.对象信息
         obj.iid = this.iid;
-        obj.imgURL = this.topImages[0]
-        obj.title = this.goods.title
+        obj.imgURL = this.topImages[0];
+        obj.title = this.goods.title;
         obj.desc = this.goods.desc;
         obj.newPrice = this.goods.nowPrice;
         // 3.添加到Store中
