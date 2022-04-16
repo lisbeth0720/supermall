@@ -19,6 +19,11 @@
          <detail-comment-info :comment-info="commentInfo" ref="comment"/>
          <goods-list :goods="recommends" :which-page="1" ref="recommend"/>
    </better-scroll>
+   <detail-bottom-bar @addToCart="addToCart" class="bottomBar"></detail-bottom-bar>
+    <!-- <back-top @backTop="backTop" class="back-top" v-show="isShowBackTop">
+      <img src="~assets/img/common/top.png" alt="">
+    </back-top> -->
+    <back-top @click.native="backTop" v-show="isShowBackTop" />
   </div>
 </template>
 <script>
@@ -30,12 +35,15 @@
  import DetailGoodsInfo from "./childComps/DetailGoodsInfo.vue"
  import DetailParamInfo from "./childComps/DetailParamInfo.vue"
  import DetailCommentInfo from "./childComps/DetailCommentInfo.vue"
+ import DetailBottomBar from "./childComps/DetailBottomBar.vue"
 
-  //2.一些插件或公共组件
+  //2.一些插件或公共组件或常量
  import BetterScroll from "components/common/scroll/BetterScroll.vue"
  import GoodsList from "components/content/goods/GoodsList.vue"
  //import emitter from "assets/utils/mitt.js";
-import {itemListenerMixin} from "common/mixin.js";
+ import {itemListenerMixin} from "common/mixin.js";
+ import BackTop from 'components/content/backTop/BackTop'
+  import {BACK_POSITION} from "common/const.js"
 
  //3.一些方法
   import {getDetail,Goods,Shop,GoodsParam,getRecommend} from "network/detail.js"
@@ -52,7 +60,9 @@ import {itemListenerMixin} from "common/mixin.js";
           DetailGoodsInfo,
           DetailParamInfo,
           DetailCommentInfo,
-          GoodsList
+          GoodsList,
+          DetailBottomBar,
+          BackTop,
       },
       mixins:[itemListenerMixin],
       data(){
@@ -69,7 +79,8 @@ import {itemListenerMixin} from "common/mixin.js";
               bsMaxScrollY:0, //better-scroll最大高度，检测是否滚到底部
               themeTopYs:[],//顶部导航分类下的每个分类的开始区域的Y值，用于实现点击分类按钮滚动到对应的y值位置
               getThemeTopY:null,
-              currentIndex:0
+              currentIndex:0,
+              isShowBackTop:false
           }
       },
    activated(){
@@ -178,7 +189,7 @@ import {itemListenerMixin} from "common/mixin.js";
              this.themeTopYs.push(this.$refs.params.$el.offsetTop)
              this.themeTopYs.push(this.$refs.comment.$el.offsetTop)
              this.themeTopYs.push(this.$refs.recommend.$el.offsetTop)
-             console.log(this.themeTopYs) 
+             //console.log(this.themeTopYs) 
 
              //下面取到的this.bsMaxScrollY值还是不对 
              //this.bsMaxScrollY=-(this.$refs.recommend.$el.offsetTop+this.$refs.recommend.$el.offsetHeight)
@@ -221,16 +232,38 @@ import {itemListenerMixin} from "common/mixin.js";
             //处理太频繁的问题，加判断this.currentIndex!==i
              if(this.currentIndex!==i&&((i<length-1&&positionY>this.themeTopYs[i]&&positionY<this.themeTopYs[i+1])||(i==length-1&&positionY>this.themeTopYs[i]))){
                     this.currentIndex=i;
-                    console.log(i)
+                   // console.log(i)
                     //this.$refs.nav.currentIndex 这样能取到组件this.$refs.nav中的变量currentIndex
                     this.$refs.nav.currentIndex=this.currentIndex;
             }
          }
-         
+         //是否显示滚动到底部
+        // this.isShowBackTop=-position.y>BACK_POSITION
+         //1.判断BackTop是否显示
+         this.isShowBackTop=(-position.y)>BACK_POSITION;
       },
       titleClick(index){
-           console.log(index);
+           //console.log(index);
            this.$refs.scroll.scrollTo(0,-this.themeTopYs[index],200)
+      },
+      addToCart() {
+        // 1.创建对象
+        const obj = {}
+        // 2.对象信息
+        obj.iid = this.iid;
+        obj.imgURL = this.topImages[0]
+        obj.title = this.goods.title
+        obj.desc = this.goods.desc;
+        obj.newPrice = this.goods.nowPrice;
+        // 3.添加到Store中
+        this.$store.commit('addCart', obj)
+      },
+       backTop(){ //回到顶部
+        //下面两种方式都能实现回到顶部
+         //1.bscroll是组件BetterScroll的滚动事件，直接调用滚动事件中的scrollTo方法
+         //1.this.$refs.scroll.bscroll.scrollTo(0,0,500);
+        //2.scrollToTop()是组件BetterScroll组件里的方法 （这种方式体现了封装思想，面对这个组件，而这个组件中有scrollToTop这个方法，而scrollToTop这个方法内部做了什么在这里不需要关心，只需要知道组件BetterScroll里有个scrollToTop方法，面对这个组件进行开发就好。先把scrollTo事件封装到scrollToTop方法里，再通过调用组件中的方法）
+          this.$refs.scroll.scrollToTop(0,0);
       }
      },
      destroyed(){
@@ -266,4 +299,16 @@ import {itemListenerMixin} from "common/mixin.js";
       /* height:calc(100% - 44px) */
      
   }
+  .back-top {
+    position: fixed;
+    right: 10px;
+    bottom: 65px;
+  }
+  .back-top img{
+    width: 43px;
+    height: 43px;
+}
+.bottomBar{
+  z-index:9;
+}
 </style>

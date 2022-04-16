@@ -8,7 +8,7 @@
                    @itemClick="homeTabClick" 
                    ref="topTabControl"
                    v-show="isTabFixed" />
-      <better-scroll class="content" 
+      <better-scroll class="content"    
                      ref="scroll" 
                      :probe-type="3" 
                      @scroll="contentScroll"
@@ -32,13 +32,14 @@
 </template>
 
 <script>
- //1.1公共组件
+ //1.1公共组件或者常量
   import NavBar from 'components/common/navbar/NavBar.vue'
   import TabControl from 'components/content/tabControl/TabControl.vue'
   import GoodsList from 'components/content/goods/GoodsList.vue'
   import BetterScroll from 'components/common/scroll/BetterScroll.vue'
   import BackTop from 'components/content/backTop/BackTop.vue'
- 
+  import {BACK_POSITION} from "common/const.js"
+
  //2.子组件
   import HomeSwiper from './childComps/HomeSwiper.vue'
   import FeatureView from './childComps/FeatureView.vue'
@@ -47,7 +48,7 @@
   //3.一些方法
   import {getHomeMultidata,getHomeGoods} from "network/home.js";
   //import {debounce} from "common/utils.js";
-  import {itemListenerMixin} from "common/mixin.js";
+ import {itemListenerMixin} from "common/mixin.js";
 
   //4.一些插件-下面的进行了封装
   //import emitter from "assets/utils/mitt.js"
@@ -191,11 +192,10 @@
       },
       contentScroll(position){
          //1.判断BackTop是否显示
-         this.isShowBackTop=(-position.y)>1000;
+         this.isShowBackTop=(-position.y)>BACK_POSITION;
 
          //2.判断tabControl是否吸顶（position:fixed)
          this.isTabFixed=(-position.y)>this.tabOffsetTop;
-         //console.log(this.isTabFixed,this.tabOffsetTop)
       },
       // contentScroll(position) {
 		  //   // 1.决定tabFixed是否显示
