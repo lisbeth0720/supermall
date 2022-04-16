@@ -62,14 +62,8 @@
      //console.log(store.state.carList) 
      //vue 2x的写法
      //console.log($store.state.carList)
-     // 修改info的值
-     const handleClick = () => {
-         // 触发mutations，用于同步修改state的信息
-         // store.commit('updateInfo', 'nihao')
-         // 触发actions，用于异步修改state的信息
-         //store.dispatch('updateInfo', 'hi')
-     }
-     return { handleClick }
+
+
      },
       components:{
           DetailNavBar,

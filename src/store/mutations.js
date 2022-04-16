@@ -1,10 +1,10 @@
 export default {
-    //下面的代码暂时不用，用重构后的 addCart()写在了actions里了
+    //下面的代码暂时不用，用重构后的
     addCart22(state, payload) {
         //payload新添加的商品
         //1.查找之前数组中是否有该商品
         let oldProduct = null
-        for (let item of state.carList) {
+        for (let item of state.cartList) {
             if (item.iid === payload.iid) {
                 oldProduct = item;
             }
@@ -26,14 +26,22 @@ export default {
             payload.count = 1;
             state.carList.push(payload)
         }
-        //console.log(oldProduct)
     },
 
     //对上面代码进行了重构
-    addCounter(state, payload) {
-        payload.counter++
-    },
-    addToCart(state, payload) {
-        state.carList.push(payload)
+    addCart(context, payload) {
+        //1.查找之前数组中是否有该商品
+        let oldProduct = context.cartList.find(item => item.iid === payload.iid)
+            //2.判断oldProduct
+        if (oldProduct) {
+            oldProduct.count += 1;
+            //context.commit('addCounter', oldProduct)
+        } else {
+            payload.count = 1;
+            context.cartList.push(payload)
+                //下面的commit报错了
+                //context.commit('addToCart', payload)
+        }
+
     }
 }

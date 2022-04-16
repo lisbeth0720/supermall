@@ -24,14 +24,14 @@ import getters from './getters.js'
 import actions from './actions.js'
 import modules from './modules.js'
 const state = {
-    carList: []
+    cartList: []
 };
 //vue3x的写法
 import { createStore } from 'vuex'
 
 export default createStore({
     state: state,
-    getters: getters, //相当于计算属性
+    getters: getters,
     mutations: mutations,
     actions: actions,
     modules: modules
