@@ -41,7 +41,7 @@ export default {
   },
   methods:{
      itemClick(){
-       console.log("itemClick");
+       //console.log("itemClick");
         //this.$router.push(this.path);//返回不可以点击
        this.$router.replace(this.path);//返回可以点击
      }

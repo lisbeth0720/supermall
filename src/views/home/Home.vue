@@ -91,13 +91,13 @@
       }
     },
     activated(){
-      console.log("home enter,设置位置");
+     // console.log("home enter,设置位置");
       //设置位置
-      console.log(this.saveY)
+     // console.log(this.saveY)
       this.$refs.scroll.scrollTo(0,this.saveY,0)
     },
     deactivated(){
-      console.log("home leave,记录位置")
+     // console.log("home leave,记录位置")
        //记录位置
       this.saveY=this.$refs.scroll.getScrollY();
     },

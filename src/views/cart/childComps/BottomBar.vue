@@ -9,7 +9,7 @@
 
 <script>
   import CheckButton from './CheckButton'
-
+  import { useStore } from 'vuex'
 	export default {
 		name: "BottomBar",
     components: {
@@ -17,7 +17,15 @@
     },
     computed: {
 		  totalPrice() {
-        const cartList = this.$store.getters.cartList;
+        //const cartList = this.$store.getters.cartList;
+         const store = useStore()
+         const cartList = store.getters.cartList;
+         for(let i=0;i<cartList.length;i++){
+           var sum=0;
+           sum+=cartList[i];
+              return sum;
+         }
+         console.log(cartList)
         // return cartList.filter(item => {
         //   return item.checked
         // }).reduce((preValue, item) => {

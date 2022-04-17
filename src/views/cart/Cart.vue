@@ -22,7 +22,7 @@
 		name: "Cart",
     setup () {
       const store = useStore()
-      //console.log(store.state.cartList.length)
+      //console.log(store.state.cartList)
      },
     components: {
 		  NavBar,
@@ -37,7 +37,6 @@
         //vue3x的写法
         //return store.state.cartList.length
         //封装了gitter.js里了
-        console.log(store.getters.cartLength)
         return store.getters.cartLength
       },
 		   cartList() {
