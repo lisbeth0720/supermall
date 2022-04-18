@@ -195,7 +195,6 @@
          //this.$refs.scroll.refresh();
         //做防抖操作，不用刷新太多次-this.$refs.scroll.refresh();进行了防抖和封装操作，具体代码在mixin.js里
           this.newRefresh();
-
           //获取导航对应顶部位置-防止执行多次，可以加防抖函数，目的是防止频繁获取，提高性能
           //this.getThemeTopY=debounce(() =>{//后期需要排查这里的防抖为撒不起作用
              this.themeTopYs=[];

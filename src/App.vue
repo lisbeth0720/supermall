@@ -8,10 +8,17 @@
     <router-view v-if=" !$route.meta.keepAlive" /> -->
       <!-- vue 3x的写法 -->
     
-   <router-view v-slot="{Component}">
+   <!-- <router-view v-slot="{Component}">
      <keep-alive :exclude="Detail">
        <component :is="Component" />
      </keep-alive>
+   </router-view> -->
+   <!-- 上面vue3x的写法有bug，详情页需要清空缓存，但是结果并没有清除，下面的代码正确 -->
+   <router-view v-slot="{Component,route}">
+     <keep-alive>
+       <component :is="Component" :key="route.path" v-if="route.meta.keepAlive"/>
+     </keep-alive>
+     <component :is="Component" v-if="!route.meta.keepAlive"/>
    </router-view>
     
     <main-tab-bar></main-tab-bar>

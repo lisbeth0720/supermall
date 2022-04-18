@@ -21,7 +21,25 @@ export function getDetail(iid){
           serverUrl=serverUrl+"/dist";
      }
     
-    let newUrl=serverUrl+"/data/detail/detail.json";
+    let newUrl=serverUrl+"/data/detail/detail.json";//李宁
+    if(iid=="1n11"){
+      newUrl=serverUrl+"/data/detail/detail2.json";//隅田川iid==1101,1n30
+    }else if(iid=="1n30"){
+      newUrl=serverUrl+"/data/detail/detail2.json";//隅田川iid==1101,1n30
+   }else if(iid=="1n02"){
+      newUrl=serverUrl+"/data/detail/detail3.json";//双立人
+    }else if(iid=="1s09"){
+      newUrl=serverUrl+"/data/detail/detail4.json";//开小灶
+    }else if(iid=="1n16"){
+       newUrl=serverUrl+"/data/detail/detail4.json";//开小灶
+    }else if(iid=="1n16"){
+     newUrl=serverUrl+"/data/detail/detail4.json";//开小灶
+   }else if(iid=="1n13"){
+     newUrl=serverUrl+"/data/detail/detail5.json";//陌森
+   }else if(iid=="1n16"){
+     newUrl=serverUrl+"/data/detail/detail5.json";//陌森
+   }
+    console.log(newUrl)
     return request({
          url:newUrl,
          params:{

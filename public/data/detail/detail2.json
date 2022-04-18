@@ -1,0 +1,258 @@
+{
+    "iid": "1p01",
+    "result": {
+        "columns": [
+            "销量 8962",
+            "收藏 1209人",
+            "顺丰快递"
+        ],
+        "detailInfo": {
+            "desc": "意式鲜咖啡 24片装（0蔗糖 0添加），1个",
+            "esi": "<esi:try><esi:attempt><esi:include src='http://m.meilis'",
+            "isLogin": false,
+            "detailImage": [{
+                    "anchor": "111",
+                    "desc": "肖战同款",
+                    "key": "口感特别好",
+                    "list": [
+                        "https://m.360buyimg.com/mobilecms/s1265x1265_jfs/t1/156412/33/23427/319576/618b7a07Eeb85d655/fd9a38c9a0864ceb.jpg!q70.dpg.webp",
+                        "https://m.360buyimg.com/mobilecms/s1265x1265_jfs/t1/185753/16/141/108512/607f93dbEfeeac7c1/014dbe8344598901.jpg!q70.dpg.webp",
+                        "https://m.360buyimg.com/mobilecms/s1265x1265_jfs/t1/168825/16/28663/269036/618b7a07Ec0102f2f/e00c9f1f79698b45.jpg!q70.dpg.webp",
+                        "https://m.360buyimg.com/mobilecms/s1265x1265_jfs/t1/170219/12/23980/194060/618b7bbfEfe66f54f/aad05ca43348d7a6.jpg!q70.dpg.webp"
+                    ]
+                },
+                {
+                    "anchor": "111",
+                    "desc": "2022年新款",
+                    "key": "包装新颖",
+                    "list": [
+                        "https://img11.360buyimg.com/cms/jfs/t1/134378/37/24217/345862/623c432aE3ae71770/95894bc299959ecb.jpg",
+                        "https://img.alicdn.com/imgextra/i1/2206472914739/O1CN01u1WVlY1ksVggxfIUv_!!2206472914739.jpg",
+                        "https://img.alicdn.com/imgextra/i3/2207285323466/O1CN019xk5ce1bTTT8Gv22t_!!0-item_pic.jpg_430x430q90.jpg",
+                        "https://img.alicdn.com/imgextra/i1/2212994938707/O1CN018d79oL2EBrI4P8Ltj_!!0-item_pic.jpg_430x430q90.jpg"
+                    ]
+                }
+            ]
+        },
+        "itemInfo": {
+            "addCartTips": false,
+            "admin": false,
+            "cFav": 0,
+            "cartNum": 0,
+            "cids": "#682# #683# #684# #685#",
+            "desc": "【热卖爆款】60秒即可冲泡一杯鲜如现磨的手冲咖啡-意式24片挂耳黑咖啡，领券买2件减30元，买3件减60元！点速抢~ ",
+            "discountBgColor": "#f13e3a",
+            "discountDesc": "降价处理",
+            "exrta": {
+                "deliveryTime": 72,
+                "sendAddress": "北京市"
+            },
+            "highNowPrice": "75.00",
+            "highPrice": "99.00",
+            "iid": "1p01",
+            "imUrl": "https://imTaIk?souce=1&goodId=1p01&userid=13e",
+            "inActivity": false,
+            "isFaved": false,
+            "isGrayUser": false,
+            "isNewComer": false,
+            "isSelf": false,
+            "lowNowPrice": "75.00",
+            "lowPrice": "99.00",
+            "oldPrice": "￥99.00",
+            "price": "75.00",
+            "redPacketsSwitch": false,
+            "saleType": 0,
+            "shopId": "103dvg",
+            "state": 0,
+            "tags": "",
+            "title": "隅田川日本进口挂耳咖啡意式现磨手冲挂滤特浓黑咖啡粉无蔗糖添加节日礼物礼盒 意式鲜咖啡 24片装（0蔗糖 0添加）",
+            "topImages": [
+                "https://m.360buyimg.com/mobilecms/s750x750_jfs/t1/198829/11/22373/234246/625d0fefEc09d1854/9ee8f92418a5ea46.jpg!q80.dpg.webp",
+                "https://m.360buyimg.com/mobilecms/s1265x1265_jfs/t1/185753/16/141/108512/607f93dbEfeeac7c1/014dbe8344598901.jpg!q70.dpg.webp",
+                "https://m.360buyimg.com/mobilecms/s1265x1265_jfs/t1/168574/25/9717/89872/604246edE0dc21bf2/56445d82ad1dcdaf.jpg!q70.dpg.webp",
+                "https://m.360buyimg.com/mobilecms/s1265x1265_jfs/t1/173660/12/5629/227209/607f93dbE1c2969c4/e4f5bd13c5d99756.jpg!q70.dpg.webp"
+            ],
+            "userId": "13exhmo",
+            "video": {
+                "cover": ""
+            }
+        },
+        "itemParams": {
+            "info": {
+                "anchor": "product_info",
+                "key": "商品参数",
+                "set": [{
+                        "key": "厚薄",
+                        "value": "普通"
+                    },
+                    {
+                        "key": "厂名",
+                        "value": "美衣梦莎服饰有限公司"
+                    },
+                    {
+                        "key": "颜色",
+                        "value": "上衣+裤子"
+                    },
+                    {
+                        "key": "尺码",
+                        "value": "S,XL,L,M"
+                    },
+                    {
+                        "key": "衣长",
+                        "value": "常规款(51-65cm)"
+                    },
+                    {
+                        "key": "季节",
+                        "value": "春季"
+                    },
+                    {
+                        "key": "厂址",
+                        "value": "广州白云京溪颐和港31号"
+                    },
+                    {
+                        "key": "材质",
+                        "value": "聚酯纤维"
+                    },
+                    {
+                        "key": "领型",
+                        "value": "其他领型"
+                    },
+                    {
+                        "key": "袖长",
+                        "value": "长袖"
+                    },
+                    {
+                        "key": "款式",
+                        "value": "衣裤套装"
+                    },
+                    {
+                        "key": "风格",
+                        "value": "通勤(QL)"
+                    },
+                    {
+                        "key": "潮流",
+                        "value": "韩系"
+                    }
+                ],
+                "images": [
+                    "https://img11.360buyimg.com/cms/jfs/t1/134378/37/24217/345862/623c432aE3ae71770/95894bc299959ecb.jpg"
+                ]
+            },
+            "rule": {
+                "anchor": "size_info",
+                "disclaimer": "*以上尺寸为实物人工测量，因测量当时不同会有1-2cm误差，相关数据仅供参考",
+                "key": "尺码说明",
+                "tables": [
+                    [
+                        ["尺码", "M", "L", "XL", "XXL"]
+                    ],
+                    [
+                        ["衣长", "61", "63", "64", "66"]
+                    ],
+                    [
+                        ["胸围", "62", "63", "63", "66"]
+                    ],
+                    [
+                        ["袖长", "63", "66", "69", "72"]
+                    ],
+                    [
+                        ["图案", "宫廷复古图/民族复古图"]
+                    ]
+                ]
+            }
+        },
+        "promotions": {
+            "alertData": {},
+            "link": "mls://shoppro?shopId=lo3dvg",
+            "list": []
+        },
+        "rate": {
+            "cRate": 144,
+            "list": [{
+                "canExplain": false,
+                "content": "口感特别好，包装也很新颖，好朋友推荐，一买就上瘾了，四买了很多次，确实不错，也推荐身边的朋友和同事买，而且送货速度很快哟！！",
+                "created": "1535694719",
+                "extraInfo": "沐雪DAYTOY",
+                "images": [
+                    "https://img30.360buyimg.com/shaidan/s128x96_jfs/t1/126074/27/21073/59223/622daa4fE0a3fcc84/16ff5736075f57cc.jpg!cc_100x100!q70.dpg.webp",
+                    "https://img30.360buyimg.com/shaidan/s128x96_jfs/t1/213522/40/901/206636/616d3b8cEd778f3f6/bc22464eedde0562.jpg!cc_100x100!q70.dpg.webp",
+                    "https://img30.360buyimg.com/shaidan/s128x96_jfs/t1/218057/34/882/288510/616d3b8cE73010214/2b36c63cbba1b147.jpg!cc_100x100!q70.dpg.webp",
+                    "https://img30.360buyimg.com/shaidan/s128x96_jfs/t1/211192/2/5807/323014/616d3b8cEb871452a/91496559b5c252d1.jpg!cc_100x100!q70.dpg.webp"
+                ],
+                "isAnonymous": "沐雪DAYTOY",
+                "isEmpty": "棒棒糖闯江湖21",
+                "level": "棒棒糖闯江湖1",
+                "rateId": "棒棒糖闯江湖",
+                "style": "棒棒糖闯江湖",
+                "user": {
+                    "avatar": "https://storage.360buyimg.com/i.imageUpload/7261656a61636b31343732343337323437323436_sma.jpg",
+                    "uname": "棒沐雪DAYTOY"
+                }
+            }],
+            "user": {
+                "avatar": "棒棒糖闯江湖2222",
+                "uname": "棒棒糖闯江湖22"
+            }
+        },
+        "shopInfo": {
+            "allGoodsUrl": "http://m.meilishuo.com/shop/index/lo4juy",
+            "cFans": 17145,
+            "cGoods": 99,
+            "cSells": 57876,
+            "categories": [
+                {}
+            ],
+            "isMarked": false,
+            "lovel": false,
+            "shopLogo": "https://img10.360buyimg.com/cms/jfs/t1/183298/23/20746/26657/6123288bEa0d3619f/10db8cadb045f3c1.jpg!q70.dpg.webp",
+            "name": "隅田川咖啡旗舰店",
+            "nonsupportReasonRefound": false,
+            "score": [{
+                    "isBetter": false,
+                    "name": "描述相符",
+                    "score": 3.96
+                },
+                {
+                    "isBetter": true,
+                    "name": "价格合理",
+                    "score": 4.89
+                },
+                {
+                    "isBetter": false,
+                    "name": "质量满意",
+                    "score": 4.08
+                }
+            ],
+            "services": [{
+                    "name": "隅田川咖啡旗舰店",
+                    "icon": "隅田川咖啡旗舰店"
+                },
+                {
+                    "name": "隅田川咖啡旗舰店",
+                    "icon": "隅田川咖啡旗舰店"
+                }
+            ],
+            "shopId": "13fac36",
+            "shopUrl": "http://",
+            "type": 1,
+            "userId": "13fac36",
+            "goodsCount": 10
+        },
+        "skuInfo": {
+            "defaultPrice": "￥398.00",
+            "isAbroad": false,
+            "priceRange": "....",
+            "styleKey": "颜色",
+            "title": "2022年新款女装潮流",
+            "totalStock": "2326"
+        },
+        "topBar": {
+            "img": "//sll.mogucdn.com/p1/150811/upload_ieytsmbrmm4wkm3ggizdambqmeyde_226x43.png",
+            "link": "http://www.xiaodian.com/h5/download"
+        }
+    },
+    "status": {
+        "code": 1001,
+        "msg": ""
+    }
+}

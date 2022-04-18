@@ -1,0 +1,260 @@
+{
+    "iid": "1p01",
+    "result": {
+        "columns": [
+            "销量 8962",
+            "收藏 1209人",
+            "顺丰快递"
+        ],
+        "detailInfo": {
+            "desc": "陌森（MOLSION）",
+            "esi": "<esi:try><esi:attempt><esi:include src='http://m.meilis'",
+            "isLogin": false,
+            "detailImage": [{
+                    "anchor": "111",
+                    "desc": "肖战同款",
+                    "key": "遮阳",
+                    "list": [
+                        "https://m.360buyimg.com/mobilecms/s1265x1265_jfs/t1/178987/27/20024/34823/611f4f16E9b933e37/689682f679240d66.jpg!q70.dpg.webp",
+                        "https://m.360buyimg.com/mobilecms/s1265x1265_jfs/t1/191907/8/19288/38333/611f4f16E517a71a7/97cb1c457e51132c.jpg!q70.dpg.webp",
+                        "https://img10.360buyimg.com/cms/jfs/t1/123309/12/22786/444751/61ece517E03691978/85fd3c760caf4475.jpg!q70.dpg.webp",
+                        "https://m.360buyimg.com/mobilecms/s1265x1265_jfs/t1/172367/36/4331/53660/6077f4e8Ee984d5fd/beaf421031aebbed.jpg!q70.dpg.webp"
+                    ]
+                },
+                {
+                    "anchor": "111",
+                    "desc": "2022年新款",
+                    "key": "包装新颖",
+                    "list": [
+                        "https://m.360buyimg.com/mobilecms/s1265x1265_jfs/t1/178987/27/20024/34823/611f4f16E9b933e37/689682f679240d66.jpg!q70.dpg.webp",
+                        "https://img.alicdn.com/imgextra/i1/2206472914739/O1CN01u1WVlY1ksVggxfIUv_!!2206472914739.jpg",
+                        "https://img.alicdn.com/imgextra/i3/2207285323466/O1CN019xk5ce1bTTT8Gv22t_!!0-item_pic.jpg_430x430q90.jpg",
+                        "https://img.alicdn.com/imgextra/i1/2212994938707/O1CN018d79oL2EBrI4P8Ltj_!!0-item_pic.jpg_430x430q90.jpg"
+                    ]
+                }
+            ]
+        },
+        "itemInfo": {
+            "addCartTips": false,
+            "admin": false,
+            "cFav": 0,
+            "cartNum": 0,
+            "cids": "#682# #683# #684# #685#",
+            "desc": "陌森Molsion眼镜肖战明星同款防晒太阳镜男女礼物时尚潮流大框墨镜MS3018 C10镜框黑色",
+            "discountBgColor": "#f13e3a",
+            "discountDesc": "新品上市",
+            "exrta": {
+                "deliveryTime": 72,
+                "sendAddress": "北京市"
+            },
+            "highNowPrice": "609.00",
+            "highPrice": "700.00",
+            "iid": "1p01",
+            "imUrl": "https://imTaIk?souce=1&goodId=1p01&userid=13e",
+            "inActivity": false,
+            "isFaved": false,
+            "isGrayUser": false,
+            "isNewComer": false,
+            "isSelf": false,
+            "lowNowPrice": "609.00",
+            "lowPrice": "700.00",
+            "oldPrice": "￥700.00",
+            "price": "609.00",
+            "redPacketsSwitch": false,
+            "saleType": 0,
+            "shopId": "103dvg",
+            "state": 0,
+            "tags": "",
+            "title": "陌森Molsion眼镜肖战明星同款防晒太阳镜男女礼物时尚潮流大框墨镜MS3018 C10镜框黑色",
+            "topImages": [
+                "https://m.360buyimg.com/mobilecms/s750x750_jfs/t1/183322/29/22292/68295/62593041Ead413a81/734d8f9f3a6aa905.jpg!q80.dpg.webp",
+                "https://m.360buyimg.com/mobilecms/s750x750_jfs/t1/54753/11/23556/161918/625c5776Ec587bb55/3873ecb59cde0aa8.jpg!q80.dpg.webp",
+                "https://m.360buyimg.com/mobilecms/s1265x1265_jfs/t1/196153/23/19264/155144/611f4f16E59fa38cf/afabba9b58bf4ea6.jpg!q70.dpg.webp",
+                "https://m.360buyimg.com/mobilecms/s1265x1265_jfs/t1/186631/18/19280/22871/611f4f16E0d67cd38/33d6293b7c709068.jpg!q70.dpg.webp"
+            ],
+            "userId": "13exhmo",
+            "video": {
+                "cover": ""
+            }
+        },
+        "itemParams": {
+            "info": {
+                "anchor": "product_info",
+                "key": "商品参数",
+                "set": [{
+                        "key": "厚薄",
+                        "value": "普通"
+                    },
+                    {
+                        "key": "厂名",
+                        "value": "美衣梦莎服饰有限公司"
+                    },
+                    {
+                        "key": "颜色",
+                        "value": "上衣+裤子"
+                    },
+                    {
+                        "key": "尺码",
+                        "value": "S,XL,L,M"
+                    },
+                    {
+                        "key": "衣长",
+                        "value": "常规款(51-65cm)"
+                    },
+                    {
+                        "key": "季节",
+                        "value": "春季"
+                    },
+                    {
+                        "key": "厂址",
+                        "value": "广州白云京溪颐和港31号"
+                    },
+                    {
+                        "key": "材质",
+                        "value": "聚酯纤维"
+                    },
+                    {
+                        "key": "领型",
+                        "value": "其他领型"
+                    },
+                    {
+                        "key": "袖长",
+                        "value": "长袖"
+                    },
+                    {
+                        "key": "款式",
+                        "value": "衣裤套装"
+                    },
+                    {
+                        "key": "风格",
+                        "value": "通勤(QL)"
+                    },
+                    {
+                        "key": "潮流",
+                        "value": "韩系"
+                    }
+                ],
+                "images": [
+                    "https://img30.360buyimg.com/popWareDetail/jfs/t1/156930/38/12663/75664/6041875dE31454ea4/9c46cf073c52e7f1.jpg!q70.dpg.webp",
+                    "https://img30.360buyimg.com/popWareDetail/jfs/t1/164487/8/9246/52707/6041875cE9c69b070/b249e5ee85f995a4.jpg!q70.dpg.webp",
+                    "https://img30.360buyimg.com/popWareDetail/jfs/t1/168604/24/9480/44420/6041875dEac508225/f1368432fb511a5e.jpg!q70.dpg.webp"
+                ]
+            },
+            "rule": {
+                "anchor": "size_info",
+                "disclaimer": "*以上尺寸为实物人工测量，因测量当时不同会有1-2cm误差，相关数据仅供参考",
+                "key": "尺码说明",
+                "tables": [
+                    [
+                        ["尺码", "M", "L", "XL", "XXL"]
+                    ],
+                    [
+                        ["衣长", "61", "63", "64", "66"]
+                    ],
+                    [
+                        ["胸围", "62", "63", "63", "66"]
+                    ],
+                    [
+                        ["袖长", "63", "66", "69", "72"]
+                    ],
+                    [
+                        ["图案", "宫廷复古图/民族复古图"]
+                    ]
+                ]
+            }
+        },
+        "promotions": {
+            "alertData": {},
+            "link": "mls://shoppro?shopId=lo3dvg",
+            "list": []
+        },
+        "rate": {
+            "cRate": 144,
+            "list": [{
+                "canExplain": false,
+                "content": "京东物流很快，这点一直是在线的，头天买第二天就送到了，配送小哥哥超级赞👍每次都直接给送到六楼，双十一做活动，便宜爆了，买来带着玩，比普通墨镜清楚，说明镜片用料好",
+                "created": "1635694719",
+                "extraInfo": "枕头说她不想醒",
+                "images": [
+                    "https://img30.360buyimg.com/shaidan/s128x96_jfs/t1/100650/33/21412/240631/61ed546bE3b5b1982/6b27edfb5b2155f0.jpg!cc_100x100!q70.dpg.webp",
+                    "https://img30.360buyimg.com/shaidan/s128x96_jfs/t1/157330/28/26378/322283/61ed546bE948c8b85/d00c9e57bb5935de.jpg!cc_100x100!q70.dpg.webp",
+                    "https://img30.360buyimg.com/shaidan/s128x96_jfs/t1/157378/34/27622/470448/61ed546cE76213b86/a4316abbbdd79b0b.jpg!cc_100x100!q70.dpg.webp",
+                    "https://img30.360buyimg.com/shaidan/s128x96_jfs/t1/138572/19/26923/354761/61ed546bEca5cca9f/122d278999a79fd3.jpg!cc_100x100!q70.dpg.webp"
+                ],
+                "isAnonymous": "枕头说她不想醒",
+                "isEmpty": "枕头说她不想醒",
+                "level": "棒枕头说她不想醒",
+                "rateId": "枕头说她不想醒",
+                "style": "枕头说她不想醒",
+                "user": {
+                    "avatar": "https://storage.360buyimg.com/i.imageUpload/6a645f3465396335363236353435383631353833343333343734333031_sma.jpg",
+                    "uname": "枕头说她不想醒"
+                }
+            }],
+            "user": {
+                "avatar": "枕头说她不想醒",
+                "uname": "枕头说她不想醒"
+            }
+        },
+        "shopInfo": {
+            "allGoodsUrl": "http://m.meilishuo.com/shop/index/lo4juy",
+            "cFans": 457145,
+            "cGoods": 1270,
+            "cSells": 69428,
+            "categories": [
+                {}
+            ],
+            "isMarked": false,
+            "lovel": false,
+            "shopLogo": "https://img13.360buyimg.com/cms/jfs/t1/4986/18/12176/12076/5bd2a646E55120cee/116108b03a203dd7.jpg!q70.dpg.webp",
+            "name": "陌森（MOLSION）旗舰店",
+            "nonsupportReasonRefound": false,
+            "score": [{
+                    "isBetter": false,
+                    "name": "描述相符",
+                    "score": 3.96
+                },
+                {
+                    "isBetter": true,
+                    "name": "价格合理",
+                    "score": 4.89
+                },
+                {
+                    "isBetter": false,
+                    "name": "质量满意",
+                    "score": 4.08
+                }
+            ],
+            "services": [{
+                    "name": "隅陌森（MOLSION）旗舰店",
+                    "icon": "陌森（MOLSION）旗舰店"
+                },
+                {
+                    "name": "陌森（MOLSION）旗舰店",
+                    "icon": "陌森（MOLSION）旗舰店"
+                }
+            ],
+            "shopId": "13fac36",
+            "shopUrl": "http://",
+            "type": 1,
+            "userId": "13fac36",
+            "goodsCount": 10
+        },
+        "skuInfo": {
+            "defaultPrice": "￥398.00",
+            "isAbroad": false,
+            "priceRange": "....",
+            "styleKey": "颜色",
+            "title": "陌森Molsion眼镜肖战明星同款防晒太阳镜男女礼物时尚潮流大框墨镜MS3018 C10镜框黑色",
+            "totalStock": "2326"
+        },
+        "topBar": {
+            "img": "//sll.mogucdn.com/p1/150811/upload_ieytsmbrmm4wkm3ggizdambqmeyde_226x43.png",
+            "link": "http://www.xiaodian.com/h5/download"
+        }
+    },
+    "status": {
+        "code": 1001,
+        "msg": ""
+    }
+}
