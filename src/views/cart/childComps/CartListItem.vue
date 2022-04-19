@@ -4,8 +4,11 @@
       <!-- v-model为啥不起作用，不能不把itemInfo.checked传给子组件，使用:value可以 -->
       <!-- <CheckButton @checkBtnClick="checkedChange" 
                   v-model="itemInfo.checked"></CheckButton> -->
-     <CheckButton @checkBtnClick="checkedChange" 
-                 :value="itemInfo.checked"></CheckButton>
+     <!-- <CheckButton @checkBtnClick="checkedChange" 
+                 :value="itemInfo.checked"></CheckButton> -->
+                 <!-- @checkBtnClick="checkedChange" 的写法是子组件发出事件，父组件接收事件，@click.native="checkedChange"是组件本身绑定点击事件-->
+     <CheckButton :is-checked="itemInfo.checked" 
+                 @click.native="checkedChange"/>
     </div>
     <div class="item-img">
       <img :src="itemInfo.imgURL" alt="商品图片">
@@ -27,7 +30,13 @@
   export default {
     name: "ShopCartItem",
     props: {
-      itemInfo: Object
+      //itemInfo: Object
+      itemInfo: {
+        type:Object,
+        default(){
+           return {}
+        }
+      }
     },
     components: {
       CheckButton
@@ -36,6 +45,7 @@
       checkedChange: function () {
         this.itemInfo.checked = !this.itemInfo.checked;
       }
+      
     }
   }
 </script>

@@ -7,7 +7,7 @@
      <nav-bar class="nav-bar">
         <template v-slot:center><div>购物车{{cartLength}}</div></template>
       </nav-bar>
-    <cart-list class="cart-list" :cart-list="cartList"></cart-list>
+    <cart-list class="cart-list" :cart-list="cartList" />
     <bottom-bar></bottom-bar> 
   </div>
 </template>
@@ -27,7 +27,7 @@
     components: {
 		  NavBar,
       CartList,
-      BottomBar
+      BottomBar,
     },
     computed: {
       cartLength(){
@@ -50,8 +50,9 @@
 
 <style scoped>
   #cart {
-    /*position: relative;*/
+    position: relative;
     height: 100vh;
+    background-color:#fff;
   }
 
   .nav-bar {
@@ -64,5 +65,10 @@
     top: 44px;
     bottom: 49px;
     width: 100%;
+
+    /* height:calc(100% - 93px);
+    overflow: hidden; */
+    /* 不加overflow: hidden;的话会在顶部导航上显示滚动 */
+    overflow: hidden;
   }
 </style>

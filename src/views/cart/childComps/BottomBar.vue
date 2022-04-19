@@ -19,13 +19,23 @@
 		  totalPrice() {
         //const cartList = this.$store.getters.cartList;
          const store = useStore()
+         //可以用遍历，也可以用过滤器-计算的时候未选择的不能计算内
          const cartList = store.getters.cartList;
+
+         var sum=0;
          for(let i=0;i<cartList.length;i++){
-           var sum=0;
-           sum+=cartList[i];
-              return sum;
+           if(cartList[i].checked=="true"){
+              sum+=cartList[i].newPrice*cartList[i].count;
+           }
          }
-         console.log(cartList)
+         return sum;
+         //过滤器写法
+        //  return cartList.filter(item=>{
+        //       return item.checked
+        //  }).reduce((preValue,item)=>{
+        //    return item.newPrice*item.count
+        //  },0)
+
         // return cartList.filter(item => {
         //   return item.checked
         // }).reduce((preValue, item) => {

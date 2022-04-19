@@ -1,8 +1,10 @@
 <template>
-  <better-scroll>
-    <div>
-      <cart-list-item v-for="item in cartList" :key="item.iid" :item-info="item"></cart-list-item>
-    </div>
+  <better-scroll class="content" ref="scroll">
+    <!-- <div> -->
+      <cart-list-item v-for="item in cartList" 
+                      :key="item.iid" 
+                      :item-info="item"/>
+    <!-- </div> -->
   </better-scroll>
 </template>
 
@@ -22,6 +24,13 @@
 		      return []
         }
       }
+    },
+    computed: {
+      
+    },
+    activated () {
+      //购物车里面的商品增加或减少需要刷新scroll来重新计算滚动高度
+      this.$refs.scroll.refresh();
     }
 	}
 </script>

@@ -7,12 +7,12 @@
             "默认快递"
         ],
         "detailInfo": {
-            "desc": "此款为202年春新款，面料选用类似莫代尔的一种面料",
+            "desc": "此款为2022年春新款，面料选用类似莫代尔的一种面料",
             "esi": "<esi:try><esi:attempt><esi:include src='http://m.meilis'",
             "isLogin": false,
             "detailImage": [{
                     "anchor": "111",
-                    "desc": "202年新款",
+                    "desc": "2022年新款",
                     "key": "穿着效果",
                     "list": [
                         "https://m.360buyimg.com/mobilecms/s720x720_jfs/t1/201144/38/12149/139588/616e68a3Ee0a4e868/bec5805d7ee6d0be.jpg!q70.dpg.webp",
@@ -26,7 +26,7 @@
                 },
                 {
                     "anchor": "111",
-                    "desc": "202年新款",
+                    "desc": "2022年新款",
                     "key": "细节做工",
                     "list": [
                         "https://img.alicdn.com/imgextra/i1/2133725026/O1CN011sAisA1mzxMjEBzC0_!!0-item_pic.jpg",
@@ -43,7 +43,7 @@
             "cFav": 0,
             "cartNum": 0,
             "cids": "#682# #683# #684# #685#",
-            "desc": "此款为202年春新款，面料选用类似莫代尔的一种面料",
+            "desc": "此款为2022年春新款，面料选用类似莫代尔的一种面料",
             "discountBgColor": "#f13e3a",
             "discountDesc": "商家让利",
             "exrta": {

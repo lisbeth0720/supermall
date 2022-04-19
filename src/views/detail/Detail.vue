@@ -268,7 +268,6 @@
         obj.title = this.goods.title;
         obj.desc = this.goods.desc;
         obj.newPrice = this.goods.nowPrice;
-        obj.checked = false;
         // 3.添加到Store中
         //this.$store.commit('addCart', obj)
         this.$store.dispatch('addCart',obj)

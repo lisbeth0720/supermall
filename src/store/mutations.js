@@ -3,7 +3,7 @@ export default {
         payload.counter++
     },
     addToCart(state, payload) {
+        payload.checked=true
         state.cartList.push(payload)
-
     }
 }

@@ -27,8 +27,12 @@ export function getDetail(iid) {
     } else if (iid == "1n30") {
         newUrl = serverUrl + "/data/detail/detail2.json"; //隅田川iid==1101,1n30
     } else if (iid == "1n02") {
-        newUrl = serverUrl + "/data/detail/detail3.json"; //双立人
-    } else if (iid == "1s09") {
+        newUrl = serverUrl + "/data/detail/detail3_0.json"; //双立人-筷子
+    } else if(iid =="1n09_1"){
+        newUrl = serverUrl + "/data/detail/detail3.json"; //双立人-保温本
+    }else if(iid == "1s23"){
+        newUrl = serverUrl + "/data/detail/detail3_1.json"; //双立人-刀具
+    }else if (iid == "1s09") {
         newUrl = serverUrl + "/data/detail/detail4.json"; //开小灶
     } else if (iid == "1n16") {
         newUrl = serverUrl + "/data/detail/detail4.json"; //开小灶
@@ -36,12 +40,20 @@ export function getDetail(iid) {
         newUrl = serverUrl + "/data/detail/detail4.json"; //开小灶
     } else if (iid == "1n13") {
         newUrl = serverUrl + "/data/detail/detail5.json"; //陌森
-    } else if (iid == "1n16") {
+    }else if(iid=="1n17"){
+        newUrl = serverUrl + "/data/detail/detail5.json"; //陌森
+    }else if (iid == "1n16") {
         newUrl = serverUrl + "/data/detail/detail5.json"; //陌森
     } else if (iid == "1n09") {
         newUrl = serverUrl + "/data/detail/detail6.json"; //倍轻松
     } else if (iid == "1n15") {
         newUrl = serverUrl + "/data/detail/detail6.json"; //倍轻松
+    }else if (iid == "1n12") {
+        newUrl = serverUrl + "/data/detail/detail7.json"; //滴露
+    }else if (iid == "1n14") {
+        newUrl = serverUrl + "/data/detail/detail8.json"; //百事可乐
+    }else if (iid == "lflk_xiangshui") {
+        newUrl = serverUrl + "/data/detail/detail9.json"; //拉夫劳伦
     }
     console.log(newUrl)
     return request({
