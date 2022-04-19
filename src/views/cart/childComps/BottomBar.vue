@@ -1,6 +1,11 @@
 <template>
   <div class="bottom-menu">
-    <CheckButton class="select-all" @checkBtnClick="checkBtnClick" v-model="isSelectAll"></CheckButton>
+    <!-- <CheckButton class="select-all" 
+                 @checkBtnClick="checkBtnClick" 
+                 v-model="isSelectAll" /> -->
+    <CheckButton class="select-all" 
+                 @click.native="checkBtnClick" 
+                 :is-checked="isSelectAll" />
     <span>全选</span>
     <span class="total-price">合计: ¥{{totalPrice}}</span>
     <!-- <span class="buy-product">去计算({{$store.getters.cartCount}})</span> -->
@@ -51,7 +56,15 @@
       },
 
       isSelectAll: function () {
+         const store = useStore()
         //return this.$store.getters.cartList.find(item => item.checked === false) === undefined;
+        //下面代码的意思是判断是否有未选中的按钮,有的话就取反，下面这行代码的性能不怎么高，因为要遍历所有
+        //其实之需要遍历出一个有未选中的即可，有一个未选中，则下下面的全选按钮就不显示全选，用find()
+        //return !(store.getters.cartList.filter(item=>!item.checked).length);
+        //需要判断购物车里的数据为空的时候，也是不用全选的
+        if(store.getters.cartList.length===0) return false;
+        //return store.getters.cartList.find(item => item.checked === false) === undefined;
+        return !store.getters.cartList.find(item =>!item.checked);
       }
     },
     methods: {
