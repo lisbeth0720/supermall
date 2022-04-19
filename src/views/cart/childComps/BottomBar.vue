@@ -3,7 +3,8 @@
     <CheckButton class="select-all" @checkBtnClick="checkBtnClick" v-model="isSelectAll"></CheckButton>
     <span>全选</span>
     <span class="total-price">合计: ¥{{totalPrice}}</span>
-    <span class="buy-product">去计算({{$store.getters.cartCount}})</span>
+    <!-- <span class="buy-product">去计算({{$store.getters.cartCount}})</span> -->
+    <span class="buy-product">去计算({{checkLength}})</span>
   </div>
 </template>
 
@@ -16,25 +17,26 @@
 		  CheckButton
     },
     computed: {
+      //1.总价
 		  totalPrice() {
         //const cartList = this.$store.getters.cartList;
          const store = useStore()
          //可以用遍历，也可以用过滤器-计算的时候未选择的不能计算内
-         const cartList = store.getters.cartList;
+        //  const cartList = store.getters.cartList
+        //  var sum=0;
+        //  for(let i=0;i<cartList.length;i++){
+        //    if(cartList[i].checked){
+        //       sum+=cartList[i].newPrice*cartList[i].count;
+        //    }
+        //  }
+        //  return sum;
 
-         var sum=0;
-         for(let i=0;i<cartList.length;i++){
-           if(cartList[i].checked=="true"){
-              sum+=cartList[i].newPrice*cartList[i].count;
-           }
-         }
-         return sum;
          //过滤器写法
-        //  return cartList.filter(item=>{
-        //       return item.checked
-        //  }).reduce((preValue,item)=>{
-        //    return item.newPrice*item.count
-        //  },0)
+         return store.getters.cartList.filter(item=>{
+              return item.checked
+         }).reduce((preValue,item)=>{
+             return preValue + item.newPrice*item.count
+         },0).toFixed(2)
 
         // return cartList.filter(item => {
         //   return item.checked
@@ -42,6 +44,12 @@
         //   return preValue + item.count * item.newPrice
         // }, 0).toFixed(2)
       },
+      //2.去计算
+      checkLength(){
+          const store = useStore()
+          return store.getters.cartList.filter(item=>item.checked).length
+      },
+
       isSelectAll: function () {
         //return this.$store.getters.cartList.find(item => item.checked === false) === undefined;
       }

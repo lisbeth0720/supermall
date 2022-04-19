@@ -50,7 +50,7 @@
                 "deliveryTime": 72,
                 "sendAddress": "广东省揭阳市"
             },
-            "highNowPrice": "24.9.00",
+            "highNowPrice": "24.8",
             "highPrice": "35.00",
             "iid": "1p01",
             "imUrl": "https://imTaIk?souce=1&goodId=1p01&userid=13e",
@@ -59,10 +59,10 @@
             "isGrayUser": false,
             "isNewComer": false,
             "isSelf": false,
-            "lowNowPrice": "24.9.00",
+            "lowNowPrice": "24.8",
             "lowPrice": "35.00",
             "oldPrice": "￥35.00",
-            "price": "24.9.00",
+            "price": "24.8",
             "redPacketsSwitch": false,
             "saleType": 0,
             "shopId": "103dvg",
@@ -240,7 +240,7 @@
             "goodsCount": 10
         },
         "skuInfo": {
-            "defaultPrice": "￥398.00",
+            "defaultPrice": "￥24.8",
             "isAbroad": false,
             "priceRange": "....",
             "styleKey": "颜色",
