@@ -37,3 +37,31 @@ export const backTopMixin = {
         }
     }
 }
+
+
+export const tabControlMixin = {
+    data: function () {
+      return {
+        currentType: "pop",
+        //currentIndex:-1
+      }
+    },
+    methods: {
+      tabClick(index) {
+        switch (index) {
+          case 0:
+            this.currentType = "pop"
+            break
+          case 1:
+            this.currentType = "new"
+            break
+          case 2:
+            this.currentType = "sell"
+            break
+        }
+        //this.currentIndex=index;
+        console.log(this.currentType,this.currentIndex);
+      }
+    }
+  }
+  

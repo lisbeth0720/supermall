@@ -30,18 +30,33 @@ export default {
 
     //对上面代码进行了重构
     addCart(context, payload) {
-        //1.查找之前数组中是否有该商品
-        let oldProduct = context.state.cartList.find(item => item.iid === payload.iid)
+        // //1.查找之前数组中是否有该商品
+        // let oldProduct = context.state.cartList.find(item => item.iid === payload.iid)
+        //     //2.判断oldProduct
+        // if (oldProduct) {
+        //     //oldProduct.count += 1;
+        //     context.commit('addCounter', oldProduct)
+        // } else {
+        //     payload.count = 1;
+        //     //context.cartList.push(payload)
+        //     context.commit('addToCart', payload)
+        // }
+        
+        //如果你在vuex里做了默写操作，想让外界知道，就需要用到peomise
+        return new Promise((resolve,reject)=>{
+             //1.查找之前数组中是否有该商品
+            let oldProduct = context.state.cartList.find(item => item.iid === payload.iid)
             //2.判断oldProduct
-        if (oldProduct) {
+            if (oldProduct) {
             //oldProduct.count += 1;
-            context.commit('addCounter', oldProduct)
-        } else {
-            payload.count = 1;
-            //context.cartList.push(payload)
-            //下面的commit报错了
-            context.commit('addToCart', payload)
-        }
-
+               context.commit('addCounter', oldProduct)
+                resolve("当前的商品数量+1")
+            } else {
+                payload.count = 1;
+                 //context.cartList.push(payload)
+                context.commit('addToCart', payload)
+                resolve("添加了新商品")
+           }
+        })
     }
 }

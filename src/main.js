@@ -15,6 +15,9 @@ import router from './router'
 
 import store from './store'
 
+//弹框暂时还是用组件的方式
+//import toast from './components/common/toast/index.js'
+
 //createApp(App).use(插件)
 //createApp(App).use(router).mount("#app")
 createApp(App).config.productionTip = false
@@ -23,6 +26,8 @@ createApp(App).config.productionTip = false
 const app = createApp(App)
 app.use(router)
 app.use(store)
+//app.use(toast)
+
 app.mount("#app")
 
 // createApp(App)({

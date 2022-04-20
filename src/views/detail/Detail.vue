@@ -24,6 +24,8 @@
       <img src="~assets/img/common/top.png" alt="">
     </back-top> -->
     <back-top @click.native="backTop" v-show="isShowBackTop" />
+    <!-- 父组件向子组件传值的时候:属性名="变量",属性名="字符串" -->
+    <toast :message="message" :isShow="isShow"></toast>
   </div>
 </template>
 <script>
@@ -46,10 +48,15 @@
   import {BACK_POSITION} from "common/const.js"
 
   import { useStore } from 'vuex'
+
+  import Toast from 'components/common/toast/Toast'
   
  //3.一些方法
   import {getDetail,Goods,Shop,GoodsParam,getRecommend} from "network/detail.js"
   import {debounce} from "common/utils.js";
+
+  import {mapActions} from 'vuex'
+import { setTimeout } from 'timers';
 
   export default{
       name:"Detail",
@@ -77,6 +84,7 @@
           GoodsList,
           DetailBottomBar,
           BackTop,
+          Toast
       },
       mixins:[itemListenerMixin],
       data(){
@@ -94,7 +102,9 @@
               themeTopYs:[],//顶部导航分类下的每个分类的开始区域的Y值，用于实现点击分类按钮滚动到对应的y值位置
               getThemeTopY:null,
               currentIndex:0,
-              isShowBackTop:false
+              isShowBackTop:false,
+              message:'',
+              iShow:false
           }
       },
    activated(){
@@ -191,6 +201,12 @@
           // console.log(this.themeTopYs)
      },
      methods:{
+       //映射出vuex中的actions里addCart方法
+       ...mapActions(['addCart']),//在这里用这个后，可以在下面方法addToCart里直接调用
+       //this.addCart(obj).then(res=>{console.log(res) })了,不写这个的话需要// this.$store.dispatch('addCart',obj).then(res=>{
+        //   console.log(res)
+        // })
+
        imagesLoad(){
          //this.$refs.scroll.refresh();
         //做防抖操作，不用刷新太多次-this.$refs.scroll.refresh();进行了防抖和封装操作，具体代码在mixin.js里
@@ -270,7 +286,23 @@
         obj.newPrice = this.goods.nowPrice;
         // 3.添加到Store中
         //this.$store.commit('addCart', obj)
-        this.$store.dispatch('addCart',obj)
+        //this.$store.dispatch('addCart',obj)
+        //如果你在vuex里做了默写操作，想让外界知道，就需要用到peomise
+        // this.$store.dispatch('addCart',obj).then(res=>{
+        //   console.log(res)
+        // })
+
+        this.addCart(obj).then(res=>{
+          this.isShow=true;
+          this.message=res;
+          //用定时器，让提示框一会消失
+          setTimeout(()=>{
+            this.isShow=false;
+            this.message='';
+          },1500)
+          //toast弹框改成用封装成插件实现了，由于vue3移除了extend所以暂时还是用组件方式实现弹框
+          //this.$toast.show(res,1500);
+        })
       },
        backTop(){ //回到顶部
         //下面两种方式都能实现回到顶部
