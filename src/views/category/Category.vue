@@ -1,6 +1,8 @@
 <template>
   <div id="category">
-    <nav-bar class="nav-bar"><div slot="center">商品分类</div></nav-bar>
+      <nav-bar class="nav-bar">
+        <template v-slot:center><div>商品分类</div></template>
+      </nav-bar>
     <div class="content">
       <tab-menu :categories="categories"
                 @selectItem="selectItem"/>
@@ -72,7 +74,7 @@
       },
       showCategoryDetail() {
 		    if (this.currentIndex === -1) return []
-        console.log(this.currentIndex)
+        //console.log(this.currentIndex)
     
         //放回当前索引下的当前类型下的数据
 		    return this.categoryData[this.currentIndex].categoryDetail[this.currentType]
@@ -83,6 +85,7 @@
 		    getCategory().then(res => {
 		      // 1.获取分类数据
 		      this.categories = res.data.category.list
+         
           // 2.初始化每个类别的子数据
           for (let i = 0; i < this.categories.length; i++) {
             this.categoryData[i] = {
@@ -94,13 +97,14 @@
               }
             }
           }
+           console.log(this.categoryData)
           // 3.请求第一个分类的数据
           this._getSubcategories(0)
            
         })
       },
       _getSubcategories(index) {
-        console.log(this.showCategoryDetail)
+        //console.log(this.showCategoryDetail)
         //console.log(index)
         this.currentIndex = index;
 		    const mailKey = this.categories[index].maitKey;

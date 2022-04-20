@@ -26,44 +26,51 @@ import { request } from "./request.js";
 //   })
 // }
 
-var url = window.location.href;//网页地址
-var serverUrl = "http://"+(url.split("//")[1]).split("/")[0]+"/"+(url.split("//")[1]).split("/")[1];//服务器地址
-if(serverUrl.indexOf("#")>=0){
-    serverUrl=serverUrl.split("#")[0]
+var url = window.location.href; //网页地址
+var serverUrl = "http://" + (url.split("//")[1]).split("/")[0] + "/" + (url.split("//")[1]).split("/")[1]; //服务器地址
+if (serverUrl.indexOf("#") >= 0) {
+    serverUrl = serverUrl.split("#")[0]
 }
 
 if (serverUrl.indexOf("localhost") >= 0) {
-      
- }else{
-      serverUrl=serverUrl+"/dist";
- }
- console.log(serverUrl)
- 
+
+} else {
+    serverUrl = serverUrl + "/dist";
+}
+
+
 // post请求的参数写在params，get请求参数写在data里
 export function getCategory() {
-  let newUrl=serverUrl+"/data/category/category.json";
-  return request({
-    url:newUrl
-  })
+    let newUrl = serverUrl + "/data/category/category.json";
+    return request({
+        url: newUrl
+    })
 }
 
 export function getSubcategory(maitKey) {
-  let newUrl=serverUrl+"/data/category/pop.json";
-  return request({
-    url:newUrl,
-    params:{
-      maitKey
-    }
-  })
+    let newUrl = serverUrl + "/data/category/subcategory.json";
+    return request({
+        url: newUrl,
+        params: {
+            maitKey
+        }
+    })
 }
 
 export function getCategoryDetail(miniWallkey, type) {
-  let newUrl=serverUrl+"/data/category/pop.json";
-  return request({
-    url:newUrl,
-    params:{
-        miniWallkey,
-        type
+    let newUrl = serverUrl + "/data/category/pop.json";
+    if (type == "pop") {
+
+    } else if (type == "sell") {
+        newUrl = serverUrl + "/data/category/sell.json";
+    } else if (type == "new") {
+        newUrl = serverUrl + "/data/category/new.json";
     }
- })
+    return request({
+        url: newUrl,
+        params: {
+            miniWallkey,
+            type
+        }
+    })
 }
