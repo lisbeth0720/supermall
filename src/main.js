@@ -23,6 +23,12 @@ import store from './store'
 import FastClick from 'fastclick'//解决移动端300ms延迟的插件
 FastClick.attach(document.body)
 
+//图片懒加载-使用插件vue-lazyload-这个插件只针对vue2，目前vue3不可以用
+//import VueLazyLoad from 'vue-lazyload'
+//需要注意的是当使用vue-lazyload插件懒加载的时候，img :src需要改成：v-lazy
+//vue3使用插件vue3-lazy实现懒加载
+import LazyLoad from 'vue3-lazy'
+
 //createApp(App).use(插件)
 //createApp(App).use(router).mount("#app")
 createApp(App).config.productionTip = false
@@ -32,7 +38,23 @@ const app = createApp(App)
 app.use(router)
 app.use(store)
 //app.use(toast)
+//app.use(VueLazyLoad)
+// app.use(VueLazyLoad,{
+//     preLoad: 1.3,
+//     error: 'http://tc.qdscitech.net/images/2021/06/17/404.jpg', //加载出错时显示的图片
+//     loading: 'http://tc.qdscitech.net/images/2021/06/17/loading.gif', //加载中显示的图片
+//     attempt: 1
+// })
 
+// app.use(LazyLoad, {
+//     loading: 'loading.png',
+//     error: 'error.png'
+// })
+
+app.use(LazyLoad,{
+    error: require('./assets/img/common/404.jpg'), //加载出错时显示的图片
+    loading: require('./assets/img/common/loading.gif'), //加载中显示的图片
+})
 app.mount("#app")
 
 // createApp(App)({

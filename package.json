@@ -16,7 +16,9 @@
     "force": "^0.0.3",
     "mitt": "^3.0.0",
     "vue": "^3.2.25",
+    "vue-lazyload": "^1.2.6",
     "vue-router": "^4.0.14",
+    "vue3-lazy": "^1.0.0-alpha.1",
     "vuex": "^4.0.2"
   },
   "devDependencies": {
