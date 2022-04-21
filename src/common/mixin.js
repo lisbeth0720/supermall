@@ -60,7 +60,7 @@ export const tabControlMixin = {
             break
         }
         //this.currentIndex=index;
-        console.log(this.currentType,this.currentIndex);
+        //console.log(this.currentType,this.currentIndex);
       }
     }
   }

@@ -1,0 +1,61 @@
+{
+    "data": {
+        "list": [{
+                "iid": "sub_0001",
+                "image": "https://img11.360buyimg.com/focus/s140x140_jfs/t19732/6/697088077/2894/2788a72/5a9fbfd2Ncc01c1b5.jpg",
+                "link": "https://act.mogujie.com/huanxin0001?acm=3.mce.2_10_1jhwa.43542.0.ccy5br4OlfK0Q.pos_0-m_454801-sd_119",
+                "title": "字母T恤"
+            },
+            {
+                "iid": "1n02",
+                "image": "https://img11.360buyimg.com/focus/s140x140_jfs/t14266/108/2448202334/2099/c038057b/5a9fbfc7N33c2ad32.jpg",
+                "link": "https://act.mogujie.com/ruqiu00001?acm=3.mce.2_10_1ji16.43542.0.ccy5br4OlfK0R.pos_1-m_454889-sd_119",
+                "title": "白衬衫"
+            },    
+            {
+                "iid": "1n16",
+                "image": "https://img11.360buyimg.com/focus/s140x140_jfs/t18130/206/667191027/4173/bf767ab4/5a9fb67fN3834e3c9.jpg",
+                "link": "https://act.mogujie.com/liuxing00001?acm=3.mce.2_10_1jepe.43542.0.ccy5br4OlfK0T.pos_3-m_452733-sd_119",
+                "title": "衬衫"
+            },   
+            {
+                "iid": "1n09",
+                "image": "https://img11.360buyimg.com/focus/s140x140_jfs/t15667/299/2238226291/4404/19e817ba/5a9fbff4N02a4be7b.jpg",
+                "link": "https://act.mogujie.com/huanxin0001?acm=3.mce.2_10_1jhwa.43542.0.ccy5br4OlfK0Q.pos_0-m_454801-sd_119",
+                "title": "宽松卫衣"
+            },
+            {
+                "iid": "1n04",
+                "image": "https://img10.360buyimg.com/focus/s140x140_jfs/t19132/3/704890448/3460/dd1b10d7/5a9fbff9Nadff76ec.jpg",
+                "link": "https://act.mogujie.com/liuxing00001?acm=3.mce.2_10_1jepe.43542.0.ccy5br4OlfK0T.pos_3-m_452733-sd_119",
+                "title": "针织衫"
+            },
+            {
+                "iid": "1n09_1",
+                "image": "https://img11.360buyimg.com/focus/s140x140_jfs/t15157/330/2467589403/6327/a53fc93/5a9fc00dN205f4cc7.jpg",
+                "link": "https://act.mogujie.com/huanxin0001?acm=3.mce.2_10_1jhwa.43542.0.ccy5br4OlfK0Q.pos_0-m_454801-sd_119",
+                "title": "雪纺衫"
+            },
+            {
+                "iid": "1n05",
+                "image": "https://img30.360buyimg.com/focus/s140x140_jfs/t11953/286/2195921828/5728/75b86d5b/5a127fbaN2780918c.jpg",
+                "link": "https://act.mogujie.com/liuxing00001?acm=3.mce.2_10_1jepe.43542.0.ccy5br4OlfK0T.pos_3-m_452733-sd_119",
+                "title": "卫衣"
+            },
+            {
+                "iid": "1n05",
+                "image": "https://img10.360buyimg.com/focus/s140x140_jfs/t18223/92/697465593/4089/d86e35c9/5a9fbfefN8a66a14c.jpg",
+                "link": "https://act.mogujie.com/liuxing00001?acm=3.mce.2_10_1jepe.43542.0.ccy5br4OlfK0T.pos_3-m_452733-sd_119",
+                "title": "运动衣"
+            },
+            {
+                "iid": "1n06",
+                "image": "https://img12.360buyimg.com/focus/s140x140_jfs/t15313/145/2476673176/2856/879136d7/5a9fc012N86f3fb22.jpg",
+                "link": "https://act.mogujie.com/liuxing00001?acm=3.mce.2_10_1jepe.43542.0.ccy5br4OlfK0T.pos_3-m_452733-sd_119",
+                "title": "风衣"
+            }
+        ],
+        "returnCode": "SUCCESS",
+        "success": true
+    }
+}

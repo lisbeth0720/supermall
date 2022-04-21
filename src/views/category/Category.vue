@@ -6,8 +6,8 @@
     <div class="content">
       <tab-menu :categories="categories"
                 @selectItem="selectItem"/>
-      <tab-control :titles="['综合', '新品', '销量']"
-                       @itemClick="tabClick" />
+      <!-- <tab-control :titles="['综合', '新品', '销量']"
+                       @itemClick="tabClick" /> -->
       <better-scroll id="tab-content" 
                      :data="[categoryData]"
                       @scroll="contentScroll"
@@ -16,8 +16,8 @@
         <div>
           <tab-content-category :subcategories="showSubcategory"/>
 
-          <!-- <tab-control :titles="['综合', '新品', '销量']"
-                       @itemClick="tabClick" /> -->
+          <tab-control :titles="['综合', '新品', '销量']"
+                       @itemClick="tabClick" />
           <tab-content-detail :category-detail="showCategoryDetail" />
         </div>
       </better-scroll>
@@ -97,7 +97,6 @@
               }
             }
           }
-           console.log(this.categoryData)
           // 3.请求第一个分类的数据
           this._getSubcategories(0)
            
@@ -166,19 +165,20 @@
   }
 
   #tab-content {
-    /* height: 100%; */
+    height: 100%;
     flex: 1;
     overflow: hidden;
+    /* overflow: hidden;
     position: absolute;
     top: 44px; 
     bottom: 0;
     left: 100px;
-    right: 0;
+    right: 0; */
   }
   .tab-control{
-    position: absolute;
+    /* position: absolute;
     top:0;
     left: 100px;
-    width:calc(100% - 100px);
+    width:calc(100% - 100px); */
   }
 </style>

@@ -89,9 +89,11 @@ export default {
     
     width:48%;
   }
-  .goods img {
-    width: 100%;
+  .goods-item img {
+    /* width: 100%; */
     border-radius: 5px;
+    width:99%;
+    margin-left:0.5%;
   }
 
   .goods-info {

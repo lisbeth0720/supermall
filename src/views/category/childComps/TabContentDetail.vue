@@ -2,7 +2,7 @@
   <grid-view>
     <goods-list-item v-for="(item, index) in categoryDetail" 
                      :key="index" 
-                     :goodsItem="item" />
+                     :goodsItem="item"/>
   </grid-view>
 </template>
 
@@ -28,5 +28,5 @@
 </script>
 
 <style scoped>
-
+ 
 </style>
