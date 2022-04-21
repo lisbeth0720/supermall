@@ -12,6 +12,7 @@
     "better-scroll": "^1.13.2",
     "core-js": "^3.6.5",
     "element-ui": "^2.15.6",
+    "fastclick": "^1.0.6",
     "force": "^0.0.3",
     "mitt": "^3.0.0",
     "vue": "^3.2.25",

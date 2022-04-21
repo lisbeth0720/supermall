@@ -50,12 +50,14 @@ export default {
             if (oldProduct) {
             //oldProduct.count += 1;
                context.commit('addCounter', oldProduct)
-                resolve("当前的商品数量+1")
+                //resolve("当前的商品数量+1")
+                resolve("添加成功，在购物车等亲")
             } else {
                 payload.count = 1;
                  //context.cartList.push(payload)
                 context.commit('addToCart', payload)
-                resolve("添加了新商品")
+                //resolve("添加了新商品")
+                resolve("添加成功，在购物车等亲")
            }
         })
     }

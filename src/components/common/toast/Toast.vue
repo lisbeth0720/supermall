@@ -34,11 +34,12 @@
        top:50%;
        left:50%;
        transform:translate(-50%,-50%);
-       background-color:rgba(0,0,0,.6);
+       background-color:rgba(0,0,0,.8);
        color:#fff;
-       padding:8px 14px;
+       padding:10px 12px;
        z-index:999;
        border-radius: 5px;
+       white-space: nowrap;
    }
    
 </style>

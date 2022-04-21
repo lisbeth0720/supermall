@@ -18,6 +18,11 @@ import store from './store'
 //弹框暂时还是用组件的方式
 //import toast from './components/common/toast/index.js'
 
+//使用fastclick，三步即可
+//1.安装，2导入，3调用FastClick.attach(document.body)
+import FastClick from 'fastclick'//解决移动端300ms延迟的插件
+FastClick.attach(document.body)
+
 //createApp(App).use(插件)
 //createApp(App).use(router).mount("#app")
 createApp(App).config.productionTip = false
