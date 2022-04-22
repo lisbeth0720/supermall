@@ -29,6 +29,8 @@ FastClick.attach(document.body)
 //vue3使用插件vue3-lazy实现懒加载
 import LazyLoad from 'vue3-lazy'
 
+//postcss-px-to-viewport 将px转化为vw插件
+
 //createApp(App).use(插件)
 //createApp(App).use(router).mount("#app")
 createApp(App).config.productionTip = false

@@ -1,5 +1,5 @@
 <template>
-    <div id="nav-bar">
+    <div id="nav-bar" class="ignore">
         <div class="left">
             <slot name="left"></slot>
         </div>

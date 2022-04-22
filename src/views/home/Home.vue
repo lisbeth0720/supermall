@@ -279,14 +279,14 @@
 
    .content {
      /* 上下两部分高度已定，计算中间部分的高度，两种方式，1.用calc属性；2，使用定位 top,bottom给个值,left,right=0*/
-      position: absolute;
+      /* position: absolute;
       top: 44px; 
       bottom: 49px;
       left: 0;
-      right: 0;
-      /* margin-top:44px; */
-      /* calc(100%-93px)不加空格无效 */
-      /* height:calc(100% - 93px); */
+      right: 0; */
+       /* margin-top:44px;  */
+       /* calc(100%-93px)不加空格无效 */ 
+       height:calc(100% - 93px); 
       overflow:hidden;
     }
    .tab-control{
