@@ -225,11 +225,11 @@
             ],
             "services": [{
                     "name": "隅田川咖啡旗舰店",
-                    "icon": "隅田川咖啡旗舰店"
+                    "icon": "https://img10.360buyimg.com/cms/jfs/t1/183298/23/20746/26657/6123288bEa0d3619f/10db8cadb045f3c1.jpg!q70.dpg.webp"
                 },
                 {
                     "name": "隅田川咖啡旗舰店",
-                    "icon": "隅田川咖啡旗舰店"
+                    "icon": "https://img10.360buyimg.com/cms/jfs/t1/183298/23/20746/26657/6123288bEa0d3619f/10db8cadb045f3c1.jpg!q70.dpg.webp"
                 }
             ],
             "shopId": "13fac36",

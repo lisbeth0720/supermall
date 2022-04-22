@@ -26,16 +26,16 @@ export function getHomeGoods(type,page){
     if (serverUrl.indexOf("localhost") >= 0) {
           //serverUrl = "http://localhost:8080"
      }else{
-          serverUrl=serverUrl+"/dist";
+          serverUrl=serverUrl+"/dist/";
      }
     //axios.get('../../data/home/pop.json');
-    let newUrl=serverUrl+"/data/home/pop.json";
+    let newUrl=serverUrl+"data/home/pop.json";
     if(type=="pop"){
         //newUrl="http://localhost:8080/data/home/pop.json"
     }else if(type=="new"){
-        newUrl=serverUrl+"/data/home/new.json"
+        newUrl=serverUrl+"data/home/new.json"
     }else if(type=="sell"){
-        newUrl=serverUrl+"/data/home/sell.json"
+        newUrl=serverUrl+"data/home/sell.json"
     }
     return request({
          url:newUrl,

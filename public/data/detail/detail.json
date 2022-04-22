@@ -249,11 +249,11 @@
             ],
             "services": [{
                     "name": "中国李宁旗舰店",
-                    "icon": "中国李宁旗舰店"
+                    "icon": "https://img13.360buyimg.com/cms/jfs/t1/184808/30/2856/37946/6095f691E3cf20ebb/c5fe5171382d34aa.jpg!q70.dpg.webp"
                 },
                 {
                     "name": "中国李宁旗舰店",
-                    "icon": "中国李宁旗舰店"
+                    "icon": "https://img13.360buyimg.com/cms/jfs/t1/184808/30/2856/37946/6095f691E3cf20ebb/c5fe5171382d34aa.jpg!q70.dpg.webp"
                 }
             ],
             "shopId": "13fac36",

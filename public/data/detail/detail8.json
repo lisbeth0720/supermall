@@ -1,5 +1,5 @@
 {
-    "iid": "1n14",
+    "iid": "bskl",
     "result": {
         "columns": [
             "销量 5699",
@@ -47,7 +47,7 @@
             },
             "highNowPrice": "88.8",
             "highPrice": "99.00",
-            "iid": "1n14",
+            "iid": "bskl",
             "imUrl": "https://imTaIk?souce=1&goodId=1p01&userid=13e",
             "inActivity": false,
             "isFaved": false,
@@ -223,11 +223,11 @@
             ],
             "services": [{
                     "name": "百事可乐旗舰店",
-                    "icon": "百事可乐旗舰店"
+                    "icon": "https://img14.360buyimg.com/cms/jfs/t23473/307/2279287537/13205/6b76ce9b/5b7a9d92Nc533d7da.jpg"
                 },
                 {
                     "name": "百事可乐旗舰店",
-                    "icon": "百事可乐旗舰店"
+                    "icon": "https://img14.360buyimg.com/cms/jfs/t23473/307/2279287537/13205/6b76ce9b/5b7a9d92Nc533d7da.jpg"
                 }
             ],
             "shopId": "13fac36",
