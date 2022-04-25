@@ -1,4 +1,4 @@
-# supermall(vue3+vue-cli4+vuex3+vue-router)
+# 这是用vue3+vue-router4+vuex+vue-cli4实现的一个移动端会议预约管理系统
 
 ## Project setup
 ```
