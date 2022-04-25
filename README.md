@@ -1,4 +1,4 @@
-# supermall
+# supermall(vue3+vue-cli4+vuex3+vue-router)
 
 ## Project setup
 ```
