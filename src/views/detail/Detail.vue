@@ -70,7 +70,6 @@ import { setTimeout } from 'timers';
      //vue 2x的写法
      //console.log($store.state.carList)
 
-
      },
       components:{
           DetailNavBar,
