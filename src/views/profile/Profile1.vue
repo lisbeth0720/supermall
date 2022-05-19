@@ -2,7 +2,7 @@
   <div id="profile">
      <nav-bar class="profile-nav">
        <template v-slot:center>
-            <div>沐雪的杂货小铺</div>
+            <div>沐雪</div>
        </template>
         
      </nav-bar>
