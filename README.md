@@ -1,4 +1,4 @@
-# 这是用vue3+vue-router4+vuex+vue-cli4实现的一个移动端会议预约管理系统
+# 这是用vue3+vue-router4+vuex+vue-cli4实现的一个移动端购物商城
 
 ## Project setup
 ```
@@ -17,3 +17,6 @@ npm run build
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+
+###预览地址
+http://satall.cn/wxq/dist/index.html#/home
