@@ -19,4 +19,6 @@ npm run build
 See [Configuration Reference](https://cli.vuejs.org/config/).
 
 ###预览地址
-http://satall.cn/wxq/dist/index.html#/home
+http://satall.cn/Lisbeth/dist/index.html#/home
+
+(http://satall.cn/wxq/dist/index.html#/home)
